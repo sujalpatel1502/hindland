@@ -87,32 +87,31 @@ export default function HomePage() {
     </div>
     <div className="max-w-4xl mb-5 md:mb-6">
       <p className="text-white/80 font-headline font-medium text-xs tracking-wider uppercase mb-2">
-        Vision, Project, Industries transformation performed.
+        Engineering & Infrastructure
       </p>
       <h1 className="font-headline font-black text-[2.5rem] sm:text-[3.25rem] md:text-[4rem] lg:text-[4.75rem] text-white leading-[1.05] mb-3 md:mb-4">
-        Integrated EPC, Infrastructure
+        Building Reliable Infrastructure
         <br />
-        &amp; B2B Industrial Supply Solutions
+        & for India's Growth
       </h1>
       <p className="text-white/90 text-sm md:text-base max-w-xl mb-5 md:mb-6 font-light leading-relaxed">
-        Delivering engineering excellence across power, industrial, road &amp;
-        bridge infrastructure, and material supply services.
+        Hindland Infrastructure Pvt. Ltd. delivers EPC execution, CHP systems, structural fabrication, piping works, and solar EPC projects with uncompromising focus on quality and safety.
       </p>
       <div className="flex flex-row gap-2 sm:gap-3 w-full md:w-auto">
         <Link
           href="/contact"
           className="flex-1 md:flex-none inline-flex items-center justify-center gap-1.5 text-center bg-primary-container text-white font-headline font-bold uppercase tracking-wider md:tracking-wide text-[10px] md:text-[11px] px-4 md:px-6 py-3 md:py-2.5 rounded-full hover:bg-primary transition-all"
         >
-          Get a Quote
+          Contact Us
           <span className="material-symbols-outlined text-sm leading-none">
             arrow_forward
           </span>
         </Link>
         <Link
-          href="/company-profile"
+          href="/services"
           className="flex-1 md:flex-none text-center bg-white border border-white text-black font-headline font-bold uppercase tracking-wider md:tracking-wide text-[10px] md:text-[11px] px-4 md:px-6 py-3 md:py-2.5 rounded-full hover:bg-stone-200 transition-all"
         >
-          Download Company Profile
+          Our Services
         </Link>
       </div>
     </div>
@@ -122,22 +121,32 @@ export default function HomePage() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0">
         <div className="flex items-center gap-3">
           <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
-            verified
+            local_shipping
           </span>
           <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
-            EPC &amp; Infrastructure
+            Shipment
             <br />
-            Expertise
+            Delivered
           </p>
         </div>
         <div className="flex items-center gap-3 md:border-l md:border-white/10 pl-0 md:pl-8">
           <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
-            upload
+            handshake
           </span>
           <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
-            Road &amp; Bridge
+            Trusted
             <br />
-            Project Experience
+            Clients
+          </p>
+        </div>
+        <div className="flex items-center gap-3 md:border-l md:border-white/10 pl-0 md:pl-8">
+          <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
+            calendar_month
+          </span>
+          <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
+            Years in
+            <br />
+            Business
           </p>
         </div>
         <div className="flex items-center gap-3 md:border-l md:border-white/10 pl-0 md:pl-8">
@@ -145,19 +154,9 @@ export default function HomePage() {
             groups
           </span>
           <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
-            B2B Industrial
+            Skilled
             <br />
-            Material Supply
-          </p>
-        </div>
-        <div className="flex items-center gap-3 md:border-l md:border-white/10 pl-0 md:pl-8">
-          <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
-            settings
-          </span>
-          <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
-            Contracted
-            <br />
-            Fabrication Services
+            Manpower
           </p>
         </div>
       </div>
@@ -184,8 +183,7 @@ export default function HomePage() {
                 Our <span className="text-primary-container">Services</span>
               </h2>
               <p className="text-on-surface-variant max-w-md font-light">
-                Comprehensive Solutions for Power, Infrastructure & Industrial
-                Projects.
+                Explore our complete service portfolio. From concept to commissioning — we focus on quality, precision, safety, and timely delivery.
               </p>
             </div>
             <div className="flex gap-4">
@@ -222,10 +220,10 @@ export default function HomePage() {
               </div>
               <div className="bg-primary-container p-4 flex items-center gap-3">
                 <span className="material-symbols-outlined text-white text-xl">
-                  factory
+                  construction
                 </span>
                 <h3 className="font-headline font-black text-white uppercase text-sm tracking-wider">
-                  EPC Contracting
+                  Heavy Fabrication & Erection
                 </h3>
               </div>
               <div className="p-8 flex-grow">
@@ -233,7 +231,7 @@ export default function HomePage() {
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-stone-300 mt-1.5 flex-shrink-0"></span>
                     <p className="text-sm text-stone-600">
-                      End-to-end project execution from design to commissioning
+                      BTG / TG / Boiler structural fabrication & erection, CHP execution & expansion works
                     </p>
                   </li>
                 </ul>
@@ -253,22 +251,22 @@ export default function HomePage() {
               </div>
               <div className="bg-primary-container p-4 flex items-center gap-3">
                 <span className="material-symbols-outlined text-white text-xl">
-                  traffic
+                  build
                 </span>
                 <h3 className="font-headline font-black text-white uppercase text-sm tracking-wider">
-                  NH-48 Highway Bridge
+                  O&M Services
                 </h3>
               </div>
               <div className="p-8 flex-grow">
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-stone-300 mt-1.5 flex-shrink-0"></span>
-                    <p className="text-sm text-stone-600">Bridge Construction</p>
+                    <p className="text-sm text-stone-600">CHP operation & maintenance</p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-stone-300 mt-1.5 flex-shrink-0"></span>
                     <p className="text-sm text-stone-600">
-                      Heavy structural precision & erection
+                      Preventive maintenance & shutdown support
                     </p>
                   </li>
                 </ul>
@@ -288,10 +286,10 @@ export default function HomePage() {
               </div>
               <div className="bg-primary-container p-4 flex items-center gap-3">
                 <span className="material-symbols-outlined text-white text-xl">
-                  propane_tank
+                  solar_power
                 </span>
                 <h3 className="font-headline font-black text-white uppercase text-sm tracking-wider">
-                  BPCL Ethanol Refinery
+                  Solar EPC & Renewables
                 </h3>
               </div>
               <div className="p-8 flex-grow">
@@ -299,13 +297,13 @@ export default function HomePage() {
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-stone-300 mt-1.5 flex-shrink-0"></span>
                     <p className="text-sm text-stone-600">
-                      Piping Fabrication, Equipment Erection
+                      Solar EPC execution (utility / industrial)
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-stone-300 mt-1.5 flex-shrink-0"></span>
                     <p className="text-sm text-stone-600">
-                      Piping Infrastructure Supply
+                      Ground & rooftop solar projects
                     </p>
                   </li>
                 </ul>
@@ -314,10 +312,10 @@ export default function HomePage() {
           </div>
           <div className="text-center">
             <Link
-              href="/projects"
+              href="/services"
               className="border border-stone-300 text-on-surface font-headline font-bold uppercase tracking-widest text-xs px-12 py-4 rounded-full hover:bg-stone-50 transition-all"
             >
-              View All Projects
+              View All Services
             </Link>
           </div>
         </div>
@@ -335,39 +333,39 @@ export default function HomePage() {
               Why <span className="text-primary-container">Choose Us</span>
             </h2>
             <p className="text-on-surface-variant mb-12">
-              Engineering Excellence with Proven Execution Capability
+              We combine engineering expertise with disciplined execution — ensuring client confidence through safety, quality, transparency, and dependable delivery.
             </p>
             <ul className="space-y-6">
-              <li className="flex items-center gap-4">
-                <span className="material-symbols-outlined text-primary-container">
-                  support
-                </span>
-                <span className="font-headline font-bold text-sm uppercase tracking-wide">
-                  High Quality Standards
-                </span>
-              </li>
-              <li className="flex items-center gap-4">
-                <span className="material-symbols-outlined text-primary-container">
-                  check_circle
-                </span>
-                <span className="font-headline font-bold text-sm uppercase tracking-wide">
-                  On-Time Project Delivery
-                </span>
-              </li>
-              <li className="flex items-center gap-4">
-                <span className="material-symbols-outlined text-primary-container">
-                  engineering
-                </span>
-                <span className="font-headline font-bold text-sm uppercase tracking-wide">
-                  Experienced Technical Team
-                </span>
-              </li>
               <li className="flex items-center gap-4">
                 <span className="material-symbols-outlined text-primary-container">
                   health_and_safety
                 </span>
                 <span className="font-headline font-bold text-sm uppercase tracking-wide">
-                  Strong Safety Practices
+                  Safety First Approach
+                </span>
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="material-symbols-outlined text-primary-container">
+                  high_quality
+                </span>
+                <span className="font-headline font-bold text-sm uppercase tracking-wide">
+                  Quality & Precision
+                </span>
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="material-symbols-outlined text-primary-container">
+                  schedule
+                </span>
+                <span className="font-headline font-bold text-sm uppercase tracking-wide">
+                  On-Time Delivery
+                </span>
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="material-symbols-outlined text-primary-container">
+                  handshake
+                </span>
+                <span className="font-headline font-bold text-sm uppercase tracking-wide">
+                  Transparent Operations
                 </span>
               </li>
             </ul>
@@ -458,11 +456,10 @@ export default function HomePage() {
               />
               <div className="relative z-10 text-center">
                 <h3 className="text-white font-headline font-black text-2xl mb-2">
-                  Ready to start your next project?
+                  Let's Build Reliable Infrastructure Together
                 </h3>
                 <p className="text-white/60 text-xs mb-8">
-                  Contact our experts today for reliable EPC and infrastructure
-                  solutions.
+                  Need EPC execution, O&M support, or industrial trading supply? Share your requirement and our team will connect with you.
                 </p>
                 <Link
                   href="/contact"

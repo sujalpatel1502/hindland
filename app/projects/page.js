@@ -21,16 +21,17 @@ export default function ProjectsPage() {
         </div>
         <div className="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
           <span className="inline-block py-1 px-3 mb-6 bg-primary-container text-white text-[10px] font-bold tracking-[0.2em] uppercase rounded-sm">
-            Excellence in Execution
+            Our Projects
           </span>
           <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter max-w-4xl">
-            Our Global Footprint & Key Projects
+            Completed & Ongoing Projects
           </h1>
           <div className="mt-8 flex gap-4">
             <div className="h-1 w-24 bg-primary-container"></div>
             <p className="text-white/80 max-w-xl font-light text-lg">
-              Engineering landmarks that define modern infrastructure. From
-              intercontinental refineries to record-breaking suspension bridges.
+              Hindland Infrastructure has built a strong execution portfolio
+              across thermal power, industrial structures, railway works,
+              fabrication, erection, CHP, FGD, piping, and utility systems.
             </p>
           </div>
         </div>
@@ -51,10 +52,10 @@ export default function ProjectsPage() {
             </div>
             <div className="lg:w-2/5 p-12 flex flex-col justify-center bg-white">
               <span className="text-primary font-bold text-xs tracking-widest uppercase mb-4">
-                Featured Excellence
+                Ongoing Project
               </span>
               <h2 className="font-headline text-4xl font-extrabold text-primary mb-6 leading-tight">
-                The Al-Zour Integrated Refinery Expansion
+                NTPC Lara Super Thermal Power Plant
               </h2>
               <div className="space-y-6 text-on-surface-variant mb-10">
                 <div className="flex items-start gap-4">
@@ -63,7 +64,7 @@ export default function ProjectsPage() {
                   </span>
                   <div>
                     <p className="font-bold text-on-surface">Location</p>
-                    <p className="text-sm">Ahmadi Governorate, Kuwait</p>
+                    <p className="text-sm">Chhattisgarh, India</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -71,21 +72,20 @@ export default function ProjectsPage() {
                     calendar_today
                   </span>
                   <div>
-                    <p className="font-bold text-on-surface">Completion</p>
-                    <p className="text-sm">Q4 2023</p>
+                    <p className="font-bold text-on-surface">Value</p>
+                    <p className="text-sm">Rs. 5 Cr.</p>
                   </div>
                 </div>
                 <p className="text-sm leading-relaxed">
-                  A multi-billion dollar project delivering one of the largest
-                  refineries in the Middle East, setting new benchmarks for
-                  environmental compliance and production efficiency.
+                  Stacker and reclaimer erection, alignment work, and civil work
+                  for one of NTPC's key thermal power facilities.
                 </p>
               </div>
               <Link
-                href="/projects/al-zour-integrated-refinery"
+                href="#"
                 className="w-fit flex items-center gap-3 text-primary font-bold uppercase text-xs tracking-widest group"
               >
-                Full Case Study{" "}
+                View Details{" "}
                 <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">
                   arrow_forward
                 </span>
@@ -103,7 +103,8 @@ export default function ProjectsPage() {
                 Project Portfolio
               </h2>
               <p className="text-on-surface-variant mt-4 max-w-md">
-                Filter our extensive history of engineering triumphs by sector.
+                Explore our execution history across thermal power, industrial,
+                and infrastructure sectors.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -117,19 +118,19 @@ export default function ProjectsPage() {
                 type="button"
                 className="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-bold text-xs uppercase tracking-widest rounded-lg transition-colors"
               >
-                Roads
+                Ongoing
               </button>
               <button
                 type="button"
                 className="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-bold text-xs uppercase tracking-widest rounded-lg transition-colors"
               >
-                Bridges
+                Completed
               </button>
               <button
                 type="button"
                 className="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-bold text-xs uppercase tracking-widest rounded-lg transition-colors"
               >
-                Refineries
+                Power
               </button>
             </div>
           </div>
@@ -148,20 +149,20 @@ export default function ProjectsPage() {
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-8 glass-panel border-t border-white/20">
                 <span className="text-[10px] font-bold text-primary-container tracking-widest uppercase mb-1 block">
-                  Bridges
+                  Ongoing
                 </span>
                 <h3 className="font-headline text-2xl font-bold text-primary mb-4">
-                  Silverstone Crossing
+                  Khurja Thermal Power Plant 1320 MW
                 </h3>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-on-surface-variant flex items-center gap-1">
                     <span className="material-symbols-outlined text-sm">
                       location_on
                     </span>{" "}
-                    Oslo, Norway
+                    Khurja, Uttar Pradesh
                   </span>
                   <Link
-                    href="/projects/silverstone-crossing"
+                    href="#"
                     className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-container hover:underline"
                   >
                     Read More
@@ -183,20 +184,20 @@ export default function ProjectsPage() {
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-8 glass-panel border-t border-white/20">
                 <span className="text-[10px] font-bold text-primary-container tracking-widest uppercase mb-1 block">
-                  Roads
+                  Ongoing
                 </span>
                 <h3 className="font-headline text-2xl font-bold text-primary mb-4">
-                  Interstate-95 Smart Corridor
+                  Patna Metro – DMRC
                 </h3>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-on-surface-variant flex items-center gap-1">
                     <span className="material-symbols-outlined text-sm">
                       location_on
                     </span>{" "}
-                    New Jersey, USA
+                    Patna, Bihar
                   </span>
                   <Link
-                    href="/projects/interstate-95-smart-corridor"
+                    href="#"
                     className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-container hover:underline"
                   >
                     Read More
@@ -218,20 +219,20 @@ export default function ProjectsPage() {
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-8 glass-panel border-t border-white/20">
                 <span className="text-[10px] font-bold text-primary-container tracking-widest uppercase mb-1 block">
-                  Refineries
+                  Completed
                 </span>
                 <h3 className="font-headline text-2xl font-bold text-primary mb-4">
-                  Blue Sky Gas Plant
+                  India Bulls Power 1350 MW
                 </h3>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-on-surface-variant flex items-center gap-1">
                     <span className="material-symbols-outlined text-sm">
                       location_on
                     </span>{" "}
-                    Doha, Qatar
+                    Amravati, Maharashtra
                   </span>
                   <Link
-                    href="/projects/blue-sky-gas-plant"
+                    href="#"
                     className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-container hover:underline"
                   >
                     Read More
@@ -248,23 +249,24 @@ export default function ProjectsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
             <div className="lg:col-span-1">
               <h2 className="font-headline text-5xl font-black text-primary tracking-tighter leading-tight mb-6">
-                Global Impact. Local Presence.
+                Pan-India Execution Capability
               </h2>
               <p className="text-on-surface-variant text-lg mb-8">
-                We operate across 4 continents, bringing specialized engineering
-                expertise to the world's most challenging environments.
+                We operate across multiple states, bringing specialized
+                engineering expertise to India's most important infrastructure
+                projects.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 bg-white rounded-lg monolith-shadow border-l-4 border-primary-container">
-                  <span className="text-primary font-black text-2xl">42+</span>
+                  <span className="text-primary font-black text-2xl">6+</span>
                   <span className="text-xs font-bold uppercase tracking-widest text-on-surface-variant">
-                    Active Global Projects
+                    Ongoing Projects
                   </span>
                 </div>
                 <div className="flex items-center gap-4 p-4 bg-white rounded-lg monolith-shadow border-l-4 border-primary-container">
-                  <span className="text-primary font-black text-2xl">18</span>
+                  <span className="text-primary font-black text-2xl">10+</span>
                   <span className="text-xs font-bold uppercase tracking-widest text-on-surface-variant">
-                    Country Operations
+                    Completed Projects
                   </span>
                 </div>
               </div>
@@ -284,21 +286,21 @@ export default function ProjectsPage() {
                 <div className="w-4 h-4 bg-primary-container rounded-full animate-ping absolute"></div>
                 <div className="w-4 h-4 bg-primary rounded-full relative z-10 border-2 border-white"></div>
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block w-32 p-2 bg-white text-[10px] font-bold text-center monolith-shadow rounded">
-                  NA Operations Center
+                  North India Operations
                 </div>
               </div>
               <div className="absolute bottom-1/3 left-1/2 group cursor-pointer">
                 <div className="w-4 h-4 bg-primary-container rounded-full animate-ping absolute"></div>
                 <div className="w-4 h-4 bg-primary rounded-full relative z-10 border-2 border-white"></div>
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block w-32 p-2 bg-white text-[10px] font-bold text-center monolith-shadow rounded">
-                  MEA Headquarters
+                  Central India Hub
                 </div>
               </div>
               <div className="absolute top-1/2 right-1/4 group cursor-pointer">
                 <div className="w-4 h-4 bg-primary-container rounded-full animate-ping absolute"></div>
                 <div className="w-4 h-4 bg-primary rounded-full relative z-10 border-2 border-white"></div>
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block w-32 p-2 bg-white text-[10px] font-bold text-center monolith-shadow rounded">
-                  APAC Engineering Hub
+                  Western India Projects
                 </div>
               </div>
               <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur px-6 py-4 rounded-lg monolith-shadow">
@@ -307,7 +309,7 @@ export default function ProjectsPage() {
                 </p>
                 <p className="text-sm font-medium text-green-700 flex items-center gap-2">
                   <span className="w-2 h-2 bg-green-500 rounded-full"></span>{" "}
-                  100% Systems Online
+                  Active Across India
                 </p>
               </div>
             </div>

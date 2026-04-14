@@ -20,8 +20,9 @@ export default function Footer() {
             />
           </Link>
           <p className="text-sm leading-relaxed text-stone-500 mb-6">
-            Pioneering excellence in infrastructure development and heavy-duty
-            industrial supply across the globe.
+            Hindland Infrastructure Pvt. Ltd. is a trusted engineering and EPC
+            company delivering excellence in CHP/AHP systems, piping,
+            structural works, and O&amp;M support across India.
           </p>
           <div className="flex gap-4">
             <a
@@ -83,32 +84,32 @@ export default function Footer() {
 
         <div>
           <h5 className="font-headline font-bold text-xs uppercase tracking-widest text-primary mb-6">
-            Sustainability
+            Our Services
           </h5>
           <ul className="space-y-4 text-sm">
             <li>
-              <a
-                href="#"
+              <Link
+                href="/services"
                 className="text-stone-500 hover:underline decoration-primary underline-offset-4"
               >
-                Sustainability Reports
-              </a>
+                EPC &amp; Fabrication
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                href="/services"
                 className="text-stone-500 hover:underline decoration-primary underline-offset-4"
               >
-                Safety Protocols
-              </a>
+                O&amp;M Services
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                href="/services"
                 className="text-stone-500 hover:underline decoration-primary underline-offset-4"
               >
-                Green Initiatives
-              </a>
+                Solar EPC
+              </Link>
             </li>
           </ul>
         </div>
@@ -118,29 +119,29 @@ export default function Footer() {
             Contact
           </h5>
           <p className="text-sm text-stone-500 leading-relaxed">
-            102 Industrial Avenue,
+            Level 10, Plot 18-20,
             <br />
-            Heavy Engineering District,
+            Hindustan Times House,
             <br />
-            HQ - 400101
+            Connaught Place, Delhi – 110001
           </p>
           <p className="text-sm text-primary-container font-bold mt-4">
-            +1 (800) HINDLAND
+            +91 99530 07178
           </p>
         </div>
       </div>
 
       <div className="max-w-screen-2xl mx-auto px-8 mt-16 pt-8 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-xs text-stone-500">
-          &copy; {new Date().getFullYear()} Hindland Infrastructure. All Rights
-          Reserved.
+          &copy; {new Date().getFullYear()} Hindland Infrastructure Pvt. Ltd.
+          All Rights Reserved.
         </p>
         <div className="flex gap-8">
           <a href="#" className="text-xs text-stone-500 hover:text-primary-container">
             LinkedIn
           </a>
           <a href="#" className="text-xs text-stone-500 hover:text-primary-container">
-            Twitter
+            Facebook
           </a>
           <a href="#" className="text-xs text-stone-500 hover:text-primary-container">
             Instagram
