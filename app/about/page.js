@@ -14,7 +14,7 @@ export default function AboutPage() {
           <Image
             alt="Infrastructure Project"
             className="w-full h-full object-cover grayscale"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuawOE9Y8HpVxfGbGVuI3WFt8NZ7WvACVtjecoBcYmqmZbajUpFGzHyPpkMYVV4j28AwAIb0ql0I0-BzfuVXxgh1xCGcLgG66OiXhdZK9RcZa77fqKFwfzFZwu1NeB0pqJFVzpjx7NswaIVJFaBkZ5_EeR1pqlFUfqRUk6vkUO6U4rMkU0yW4zyyuCa2dGiFJVgylmgyoRHMGEGnJjvZuiaFC3Qu8xFsDi5qxh80DgbUzctedZ5jd1pbkSUGylrhm8MWaJIYjLJ0Xk"
+            src="https://storage.googleapis.com/art-docs/Why_Choose_Us.png"
             width={1920}
             height={1080}
             unoptimized

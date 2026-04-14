@@ -7,17 +7,17 @@ export default function ServicesPage() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative h-[716px] flex items-center overflow-hidden bg-primary">
+      <section className="relative h-[716px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
             alt="Massive construction site with heavy cranes and steel structures"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdVXMysp-8H776cIjPPFwZ0Dt9pAmtl7ReZlpIkQ2OFOH_W1B-bzKMi8SDTG_irDFWyKdKEDP3p9fFdG3nhzqQU09PXEy5XmowGbzL231dWoVuxqJblWzyp7FZkmqR01lQALF7ExpKGKEscqI1FVAHebDNK7VzNSyM93h-2eLPq3wvO7pbIJGTDjruLYUBQdwmadmXSagyztpdwTddGgFbwA1lIRw2AyrCu-g7n2YiZxOsmc1Ox7gTeMZsiskVn6qzchhAw0qBKjYV"
+            src="https://storage.googleapis.com/art-docs/Services.png"
             width={1920}
             height={1080}
             unoptimized
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/60 to-primary"></div>
+           <div className="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
         </div>
         <div className="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
           <span className="inline-block px-4 py-1 mb-6 bg-primary-container text-on-primary font-label text-xs font-bold uppercase tracking-[0.2em]">

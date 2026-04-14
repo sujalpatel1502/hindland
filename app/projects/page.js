@@ -12,7 +12,7 @@ export default function ProjectsPage() {
           <Image
             alt="Civil engineering project"
             className="w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa-3o8h45LKM5Bd7Hu-qqR0NzdJ9YCzwCZ5EUTIT0jksnP1VxpWYbBpYWDZRmcyw-MwVX_nGd_ViDW5619RS1liWSL5EG1TjXl5k8kDnoLzn_Xt9Acj3yUm1wXP42lzlYIAx0L5XqH2bdqnRAtRBKA1EdCpNQP3HycFouUZby80z9LzlyoSSrDqpiOtHlwnEfoVc56BMBIXtaCuR7A_Lk4HBIoe_ueT_NSOIsq8S8Gp2ZpzFjE5vGa_BhHKHo-zuyFH72n4hmrjbMY"
+            src="https://storage.googleapis.com/art-docs/projects.png"
             width={1920}
             height={1080}
             unoptimized

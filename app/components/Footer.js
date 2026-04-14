@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,9 +8,16 @@ export default function Footer() {
         <div>
           <Link
             href="/"
-            className="text-xl font-bold text-primary mb-4 block font-headline uppercase tracking-tighter"
+            className="inline-flex items-center mb-4"
+            aria-label="Hindland Infrastructure Home"
           >
-            HINDLAND
+            <Image
+              src="/assets/Hindland_Logo_Transparent.png"
+              alt="Hindland Infrastructure"
+              width={220}
+              height={66}
+              className="h-10 w-auto"
+            />
           </Link>
           <p className="text-sm leading-relaxed text-stone-500 mb-6">
             Pioneering excellence in infrastructure development and heavy-duty

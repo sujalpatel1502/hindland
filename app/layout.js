@@ -19,6 +19,11 @@ export const metadata = {
   title: "HINDLAND Infrastructure | EPC & Industrial Solutions",
   description:
     "Delivering engineering excellence across power, industrial, road & bridge infrastructure, and material supply services.",
+  icons: {
+    icon: "/assets/Hindland_Logo_Transparent.png",
+    shortcut: "/assets/Hindland_Logo_Transparent.png",
+    apple: "/assets/Hindland_Logo_Transparent.png",
+  },
 };
 
 export default function RootLayout({ children }) {

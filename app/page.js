@@ -1,105 +1,187 @@
+ "use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const heroBanners = [
+  "https://storage.googleapis.com/art-docs/hindland_banner_3.png",
+  "https://storage.googleapis.com/art-docs/hindland_banner_4.png",
+  "https://storage.googleapis.com/art-docs/hindland_banner_5.png",
+];
 
 export default function HomePage() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroBanners.length);
+    }, 4500);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const goToPrevSlide = () => {
+    setActiveSlide((prev) => (prev - 1 + heroBanners.length) % heroBanners.length);
+  };
+
+  const goToNextSlide = () => {
+    setActiveSlide((prev) => (prev + 1) % heroBanners.length);
+  };
+
   return (
     <main>
-      {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            alt="Industrial site with cooling towers at sunset"
-            className="w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAliwqQ35Syf2dMgiNDJDBDyatrsRqzPY_yQWPIN5Ll-_F3GLzND26arMMUHpSj_lvvaARXy211OKwlPjCuqZx5qFGxL9ngj3oWBemtioJr3cf6D8F72y5cYNigFiELTx6IxIek_s4HuZFAZrf-oOyLDlR9AHZK_d5jYObfBbG-gKyt0V1Gq5LIgwKITmUZrcic3yOZW0LtNPc2QLKe3Pj9avMMSjJdAyEc9yHPLgUwmlVqhSv1gIq1XSmLlK0AYqhJ2nu_tdQlE0h-"
-            width={1280}
-            height={720}
-            unoptimized
+      {/* Hero — full viewport height, stats INSIDE the hero */}
+<section className="mt-20 relative h-[calc(100dvh-5rem)] flex flex-col overflow-hidden">
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    {heroBanners.map((banner, index) => (
+      <Image
+        key={banner}
+        alt={`Industrial site banner ${index + 1}`}
+        className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${activeSlide === index ? "opacity-100" : "opacity-0"}`}
+        src={banner}
+        width={1280}
+        height={720}
+        unoptimized
+        priority={index === 0}
+      />
+    ))}
+    <div className="absolute inset-0 bg-black/45"></div>
+  </div>
+
+  {/* Hero Content */}
+  <div className="relative z-10 flex-1 flex flex-col justify-start max-w-screen-2xl mx-auto px-6 md:px-8 w-full pt-14 md:pt-16 pb-6 md:pb-8">
+    <div className="mb-4 flex items-center gap-2">
+      <button
+        type="button"
+        onClick={goToPrevSlide}
+        className="h-8 w-8 rounded-full border border-white/40 text-white/90 hover:bg-white/15 transition-colors"
+        aria-label="Previous banner"
+      >
+        <span className="material-symbols-outlined text-base leading-none">
+          chevron_left
+        </span>
+      </button>
+      <button
+        type="button"
+        onClick={goToNextSlide}
+        className="h-8 w-8 rounded-full border border-white/40 text-white/90 hover:bg-white/15 transition-colors"
+        aria-label="Next banner"
+      >
+        <span className="material-symbols-outlined text-base leading-none">
+          chevron_right
+        </span>
+      </button>
+      <div className="ml-2 flex items-center gap-1.5">
+        {heroBanners.map((banner, index) => (
+          <button
+            key={`${banner}-dot`}
+            type="button"
+            onClick={() => setActiveSlide(index)}
+            className={`h-1.5 rounded-full transition-all ${activeSlide === index ? "w-6 bg-white" : "w-2 bg-white/50 hover:bg-white/70"}`}
+            aria-label={`Go to banner ${index + 1}`}
           />
-          <div className="absolute inset-0 bg-black/40"></div>
+        ))}
+      </div>
+    </div>
+    <div className="max-w-4xl mb-5 md:mb-6">
+      <p className="text-white/80 font-headline font-medium text-xs tracking-wider uppercase mb-2">
+        Vision, Project, Industries transformation performed.
+      </p>
+      <h1 className="font-headline font-black text-[2.5rem] sm:text-[3.25rem] md:text-[4rem] lg:text-[4.75rem] text-white leading-[1.05] mb-3 md:mb-4">
+        Integrated EPC, Infrastructure
+        <br />
+        &amp; B2B Industrial Supply Solutions
+      </h1>
+      <p className="text-white/90 text-sm md:text-base max-w-xl mb-5 md:mb-6 font-light leading-relaxed">
+        Delivering engineering excellence across power, industrial, road &amp;
+        bridge infrastructure, and material supply services.
+      </p>
+      <div className="flex flex-row gap-2 sm:gap-3 w-full md:w-auto">
+        <Link
+          href="/contact"
+          className="flex-1 md:flex-none inline-flex items-center justify-center gap-1.5 text-center bg-primary-container text-white font-headline font-bold uppercase tracking-wider md:tracking-wide text-[10px] md:text-[11px] px-4 md:px-6 py-3 md:py-2.5 rounded-full hover:bg-primary transition-all"
+        >
+          Get a Quote
+          <span className="material-symbols-outlined text-sm leading-none">
+            arrow_forward
+          </span>
+        </Link>
+        <Link
+          href="/company-profile"
+          className="flex-1 md:flex-none text-center bg-white border border-white text-black font-headline font-bold uppercase tracking-wider md:tracking-wide text-[10px] md:text-[11px] px-4 md:px-6 py-3 md:py-2.5 rounded-full hover:bg-stone-200 transition-all"
+        >
+          Download Company Profile
+        </Link>
+      </div>
+    </div>
+
+    {/* Stats Bar — inside hero, below buttons */}
+    <div className="mt-4 md:mt-6 bg-[#1b1c1c]/50 backdrop-blur-sm text-white rounded-2xl px-6 md:px-10 py-4 md:py-5 border border-white/10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0">
+        <div className="flex items-center gap-3">
+          <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
+            verified
+          </span>
+          <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
+            EPC &amp; Infrastructure
+            <br />
+            Expertise
+          </p>
         </div>
-        <div className="relative z-10 max-w-screen-2xl mx-auto px-8 w-full py-20">
-          <div className="max-w-3xl">
-            <p className="text-white/80 font-headline font-medium text-xs tracking-wider uppercase mb-4">
-              Vision, Project, Industries transformation performed.
-            </p>
-            <h1 className="font-headline font-black text-5xl md:text-7xl text-white leading-tight mb-8">
-              Integrated EPC, Infrastructure & B2B Industrial Supply Solutions
-            </h1>
-            <p className="text-white/90 text-lg md:text-xl max-w-2xl mb-10 font-light leading-relaxed">
-              Delivering engineering excellence across power, industrial, road &
-              bridge infrastructure, and material supply services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="bg-primary-container text-white font-headline font-bold uppercase tracking-widest text-xs px-10 py-4 rounded-full hover:bg-primary transition-all"
-              >
-                Get a Quote
-              </Link>
-              <Link
-                href="/company-profile"
-                className="bg-transparent border border-white text-white font-headline font-bold uppercase tracking-widest text-xs px-10 py-4 rounded-full hover:bg-white/10 transition-all"
-              >
-                Download Company Profile
-              </Link>
-            </div>
-          </div>
+        <div className="flex items-center gap-3 md:border-l md:border-white/10 pl-0 md:pl-8">
+          <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
+            upload
+          </span>
+          <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
+            Road &amp; Bridge
+            <br />
+            Project Experience
+          </p>
         </div>
-      </section>
-      {/* Stats/Features Overlay Bar */}
-      <section className="bg-[#1b1c1c] text-white py-8">
-        <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="flex items-center gap-4">
-              <span className="material-symbols-outlined text-white/60 text-3xl">
-                verified
-              </span>
-              <p className="font-headline font-bold text-[11px] uppercase tracking-wider leading-snug">
-                EPC & Infrastructure
-                <br />
-                Expertise
-              </p>
-            </div>
-            <div className="flex items-center gap-4 border-l border-white/10 pl-0 md:pl-8">
-              <span className="material-symbols-outlined text-white/60 text-3xl">
-                upload
-              </span>
-              <p className="font-headline font-bold text-[11px] uppercase tracking-wider leading-snug">
-                Road & Bridge
-                <br />
-                Project Experience
-              </p>
-            </div>
-            <div className="flex items-center gap-4 border-l border-white/10 pl-0 md:pl-8">
-              <span className="material-symbols-outlined text-white/60 text-3xl">
-                groups
-              </span>
-              <p className="font-headline font-bold text-[11px] uppercase tracking-wider leading-snug">
-                B2B Industrial
-                <br />
-                Material Supply
-              </p>
-            </div>
-            <div className="flex items-center gap-4 border-l border-white/10 pl-0 md:pl-8">
-              <span className="material-symbols-outlined text-white/60 text-3xl">
-                settings
-              </span>
-              <p className="font-headline font-bold text-[11px] uppercase tracking-wider leading-snug">
-                Contracted
-                <br />
-                Fabrication Services
-              </p>
-            </div>
-          </div>
+        <div className="flex items-center gap-3 md:border-l md:border-white/10 pl-0 md:pl-8">
+          <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
+            groups
+          </span>
+          <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
+            B2B Industrial
+            <br />
+            Material Supply
+          </p>
         </div>
-      </section>
+        <div className="flex items-center gap-3 md:border-l md:border-white/10 pl-0 md:pl-8">
+          <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
+            settings
+          </span>
+          <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
+            Contracted
+            <br />
+            Fabrication Services
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* Our Services Section */}
-      <section className="bg-surface py-24">
-        <div className="max-w-screen-2xl mx-auto px-8">
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/assets/Services_section_bg.png"
+            alt="Services section background"
+            fill
+            className="object-cover object-center opacity-100"
+            priority={false}
+          />
+          <div className="absolute inset-0 bg-white/15"></div>
+        </div>
+        <div className="max-w-screen-2xl mx-auto px-8 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-8">
             <div>
               <h2 className="font-headline font-black text-4xl text-on-surface mb-4">
-                Our Services
+                Our <span className="text-primary-container">Services</span>
               </h2>
               <p className="text-on-surface-variant max-w-md font-light">
                 Comprehensive Solutions for Power, Infrastructure & Industrial
@@ -240,12 +322,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* Why Choose Us */}
-      <section className="bg-white py-24">
-        <div className="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-24">
-          <div>
+      <section className="relative bg-white py-24 overflow-hidden">
+        <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-[url('/assets/Services_section_bg.png')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-white/10"></div>
+        </div>
+        <div className="relative z-10 max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
+          <div className="relative overflow-hidden h-full p-8 md:p-10">
+            <div className="relative z-10">
             <h2 className="font-headline font-black text-4xl text-on-surface mb-4">
-              Why Choose Us
+              Why <span className="text-primary-container">Choose Us</span>
             </h2>
             <p className="text-on-surface-variant mb-12">
               Engineering Excellence with Proven Execution Capability
@@ -298,20 +385,66 @@ export default function HomePage() {
                 verified
               </span>
             </div>
+            </div>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col lg:pl-16">
             <h5 className="font-headline font-medium text-stone-500 text-center mb-10 text-sm">
               Trusted by Industry Leaders
             </h5>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 grayscale hover:grayscale-0 transition-all duration-500">
-              <div className="col-span-1 md:col-span-2 flex items-center justify-center font-bold text-2xl text-stone-300 italic">
-                TATA STEEL
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+              <div className="h-20 bg-white/70 border border-stone-200 rounded-lg flex items-center justify-center p-3">
+                <Image
+                  src="/assets/Tata.jpg"
+                  alt="Tata Steel"
+                  width={180}
+                  height={72}
+                  className="max-h-12 w-auto object-contain"
+                />
               </div>
-              <div className="h-16 flex items-center justify-center p-2 font-bold text-2xl text-stone-300 italic">
-                adani
+              <div className="h-20 bg-white/70 border border-stone-200 rounded-lg flex items-center justify-center p-3">
+                <Image
+                  src="/assets/Adani.png"
+                  alt="Adani"
+                  width={180}
+                  height={72}
+                  className="max-h-12 w-auto object-contain"
+                />
               </div>
-              <div className="h-16 flex items-center justify-center p-2 font-bold text-xl text-stone-300 italic">
-                L&T
+              <div className="h-20 bg-white/70 border border-stone-200 rounded-lg flex items-center justify-center p-3">
+                <Image
+                  src="/assets/L&T.png"
+                  alt="Larsen and Toubro"
+                  width={180}
+                  height={72}
+                  className="max-h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="h-20 bg-white/70 border border-stone-200 rounded-lg flex items-center justify-center p-3">
+                <Image
+                  src="/assets/NHPC.png"
+                  alt="NHPC"
+                  width={180}
+                  height={72}
+                  className="max-h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="h-20 bg-white/70 border border-stone-200 rounded-lg flex items-center justify-center p-3">
+                <Image
+                  src="/assets/Gail.png"
+                  alt="GAIL"
+                  width={180}
+                  height={72}
+                  className="max-h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="h-20 bg-white/70 border border-stone-200 rounded-lg flex items-center justify-center p-3">
+                <Image
+                  src="/assets/Bharat_Petroleum.png"
+                  alt="Bharat Petroleum"
+                  width={180}
+                  height={72}
+                  className="max-h-12 w-auto object-contain"
+                />
               </div>
             </div>
             <div className="mt-auto bg-[#1b1c1c] p-10 rounded-xl relative overflow-hidden mt-12">

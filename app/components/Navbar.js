@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -17,13 +18,21 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm">
-      <div className="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+    <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm h-20">
+      <div className="flex h-full justify-between items-center px-8 max-w-screen-2xl mx-auto">
         <Link
           href="/"
-          className="text-2xl font-black tracking-tighter text-primary uppercase font-headline"
+          className="inline-flex items-center"
+          aria-label="Hindland Infrastructure Home"
         >
-          HINDLAND
+          <Image
+            src="/assets/Hindland_Logo_Transparent.png"
+            alt="Hindland Infrastructure"
+            width={260}
+            height={78}
+            className="h-10 sm:h-12 w-auto"
+            priority
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
