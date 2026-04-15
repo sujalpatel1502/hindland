@@ -1,7 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-export const metadata = { title: "Projects | HINDLAND Infrastructure" };
+import {
+  FadeInUp,
+  SlideInLeft,
+  SlideInRight,
+  StaggerContainer,
+  StaggerItem,
+  CountUp,
+} from "../components/MotionWrappers";
 
 export default function ProjectsPage() {
   return (
@@ -20,123 +28,135 @@ export default function ProjectsPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
-          <span className="inline-block py-1 px-3 mb-6 bg-primary-container text-white text-[10px] font-bold tracking-[0.2em] uppercase rounded-sm">
-            Our Projects
-          </span>
-          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter max-w-4xl">
-            Completed & Ongoing Projects
-          </h1>
-          <div className="mt-8 flex gap-4">
-            <div className="h-1 w-24 bg-primary-container"></div>
-            <p className="text-white/80 max-w-xl font-light text-lg">
-              Hindland Infrastructure has built a strong execution portfolio
-              across thermal power, industrial structures, railway works,
-              fabrication, erection, CHP, FGD, piping, and utility systems.
-            </p>
-          </div>
+          <FadeInUp>
+            <span className="inline-block py-1 px-3 mb-6 bg-primary-container text-white text-[10px] font-bold tracking-[0.2em] uppercase rounded-sm">
+              Our Projects
+            </span>
+          </FadeInUp>
+          <FadeInUp delay={0.15}>
+            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter max-w-4xl">
+              Completed & Ongoing Projects
+            </h1>
+          </FadeInUp>
+          <FadeInUp delay={0.3}>
+            <div className="mt-8 flex gap-4">
+              <div className="h-1 w-24 bg-primary-container"></div>
+              <p className="text-white/80 max-w-xl font-light text-lg">
+                Hindland Infrastructure has built a strong execution portfolio
+                across thermal power, industrial structures, railway works,
+                fabrication, erection, CHP, FGD, piping, and utility systems.
+              </p>
+            </div>
+          </FadeInUp>
         </div>
       </section>
+
       {/* Featured Project */}
       <section className="bg-surface-container-low py-24">
         <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="flex flex-col lg:flex-row gap-0 monolith-shadow rounded-xl overflow-hidden bg-white">
-            <div className="lg:w-3/5 h-[500px] lg:h-auto overflow-hidden">
-              <Image
-                alt="Featured Refinery Project"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOB1p9Cu9piK9LX5EpmDZBGgoC-9GphUu7IO3GlHNuRy7w6pcjRe8MZMtR4ThLl2KZCLkIOZ4J-OIsY31D3HB81GNSFTpGccaxGeO2dB20Jrvp5JWmTdhlFvzSpLkTeYU_wpusmb9UVIrhjFBm37W9X6VjmIlrzLy1n6s1wv0nanyYv25PhlB_1XnLdlKJyZkltwrS1zQoOE6qdWYInYln_YX5_ysU-uO-nLMG4GChp9ATY_nRoAaqdDUdgJjMVbjhR5qXJEwCXHO5"
-                width={1280}
-                height={720}
-                unoptimized
-              />
-            </div>
-            <div className="lg:w-2/5 p-12 flex flex-col justify-center bg-white">
-              <span className="text-primary font-bold text-xs tracking-widest uppercase mb-4">
-                Ongoing Project
-              </span>
-              <h2 className="font-headline text-4xl font-extrabold text-primary mb-6 leading-tight">
-                NTPC Lara Super Thermal Power Plant
-              </h2>
-              <div className="space-y-6 text-on-surface-variant mb-10">
-                <div className="flex items-start gap-4">
-                  <span className="material-symbols-outlined text-primary-container">
-                    location_on
-                  </span>
-                  <div>
-                    <p className="font-bold text-on-surface">Location</p>
-                    <p className="text-sm">Chhattisgarh, India</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="material-symbols-outlined text-primary-container">
-                    calendar_today
-                  </span>
-                  <div>
-                    <p className="font-bold text-on-surface">Value</p>
-                    <p className="text-sm">Rs. 5 Cr.</p>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed">
-                  Stacker and reclaimer erection, alignment work, and civil work
-                  for one of NTPC's key thermal power facilities.
-                </p>
+          <FadeInUp>
+            <div className="flex flex-col lg:flex-row gap-0 monolith-shadow rounded-xl overflow-hidden bg-white">
+              <div className="lg:w-3/5 h-[500px] lg:h-auto overflow-hidden">
+                <Image
+                  alt="Featured Refinery Project"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOB1p9Cu9piK9LX5EpmDZBGgoC-9GphUu7IO3GlHNuRy7w6pcjRe8MZMtR4ThLl2KZCLkIOZ4J-OIsY31D3HB81GNSFTpGccaxGeO2dB20Jrvp5JWmTdhlFvzSpLkTeYU_wpusmb9UVIrhjFBm37W9X6VjmIlrzLy1n6s1wv0nanyYv25PhlB_1XnLdlKJyZkltwrS1zQoOE6qdWYInYln_YX5_ysU-uO-nLMG4GChp9ATY_nRoAaqdDUdgJjMVbjhR5qXJEwCXHO5"
+                  width={1280}
+                  height={720}
+                  unoptimized
+                />
               </div>
-              <Link
-                href="#"
-                className="w-fit flex items-center gap-3 text-primary font-bold uppercase text-xs tracking-widest group"
-              >
-                View Details{" "}
-                <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">
-                  arrow_forward
+              <div className="lg:w-2/5 p-12 flex flex-col justify-center bg-white">
+                <span className="text-primary font-bold text-xs tracking-widest uppercase mb-4">
+                  Ongoing Project
                 </span>
-              </Link>
+                <h2 className="font-headline text-4xl font-extrabold text-primary mb-6 leading-tight">
+                  NTPC Lara Super Thermal Power Plant
+                </h2>
+                <div className="space-y-6 text-on-surface-variant mb-10">
+                  <div className="flex items-start gap-4">
+                    <span className="material-symbols-outlined text-primary-container">
+                      location_on
+                    </span>
+                    <div>
+                      <p className="font-bold text-on-surface">Location</p>
+                      <p className="text-sm">Chhattisgarh, India</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="material-symbols-outlined text-primary-container">
+                      calendar_today
+                    </span>
+                    <div>
+                      <p className="font-bold text-on-surface">Value</p>
+                      <p className="text-sm">Rs. 5 Cr.</p>
+                    </div>
+                  </div>
+                  <p className="text-sm leading-relaxed">
+                    Stacker and reclaimer erection, alignment work, and civil
+                    work for one of NTPC&apos;s key thermal power facilities.
+                  </p>
+                </div>
+                <Link
+                  href="/projects/ntpc-lara-super-thermal-power-plant"
+                  className="w-fit flex items-center gap-3 text-primary font-bold uppercase text-xs tracking-widest group"
+                >
+                  View Details{" "}
+                  <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">
+                    arrow_forward
+                  </span>
+                </Link>
+              </div>
             </div>
-          </div>
+          </FadeInUp>
         </div>
       </section>
+
       {/* Portfolio Filter & Grid */}
       <section className="bg-surface py-24">
         <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-            <div>
-              <h2 className="font-headline text-5xl font-black text-primary tracking-tighter">
-                Project Portfolio
-              </h2>
-              <p className="text-on-surface-variant mt-4 max-w-md">
-                Explore our execution history across thermal power, industrial,
-                and infrastructure sectors.
-              </p>
+          <FadeInUp>
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+              <div>
+                <h2 className="font-headline text-5xl font-black text-primary tracking-tighter">
+                  Project Portfolio
+                </h2>
+                <p className="text-on-surface-variant mt-4 max-w-md">
+                  Explore our execution history across thermal power, industrial,
+                  and infrastructure sectors.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  className="px-6 py-2 bg-primary-container text-white font-bold text-xs uppercase tracking-widest rounded-lg"
+                >
+                  All
+                </button>
+                <button
+                  type="button"
+                  className="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-bold text-xs uppercase tracking-widest rounded-lg transition-colors"
+                >
+                  Ongoing
+                </button>
+                <button
+                  type="button"
+                  className="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-bold text-xs uppercase tracking-widest rounded-lg transition-colors"
+                >
+                  Completed
+                </button>
+                <button
+                  type="button"
+                  className="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-bold text-xs uppercase tracking-widest rounded-lg transition-colors"
+                >
+                  Power
+                </button>
+              </div>
             </div>
-            <div className="flex flex-wrap gap-2">
-              <button
-                type="button"
-                className="px-6 py-2 bg-primary-container text-white font-bold text-xs uppercase tracking-widest rounded-lg"
-              >
-                All
-              </button>
-              <button
-                type="button"
-                className="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-bold text-xs uppercase tracking-widest rounded-lg transition-colors"
-              >
-                Ongoing
-              </button>
-              <button
-                type="button"
-                className="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-bold text-xs uppercase tracking-widest rounded-lg transition-colors"
-              >
-                Completed
-              </button>
-              <button
-                type="button"
-                className="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-bold text-xs uppercase tracking-widest rounded-lg transition-colors"
-              >
-                Power
-              </button>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </FadeInUp>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project Card 1 */}
-            <div className="group relative bg-white overflow-hidden monolith-shadow">
+            <StaggerItem className="group relative bg-white overflow-hidden monolith-shadow">
               <div className="aspect-[4/5] overflow-hidden">
                 <Image
                   alt="Suspension Bridge"
@@ -162,16 +182,16 @@ export default function ProjectsPage() {
                     Khurja, Uttar Pradesh
                   </span>
                   <Link
-                    href="#"
+                    href="/projects/khurja-thermal-power-plant-1320-mw"
                     className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-container hover:underline"
                   >
                     Read More
                   </Link>
                 </div>
               </div>
-            </div>
+            </StaggerItem>
             {/* Project Card 2 */}
-            <div className="group relative bg-white overflow-hidden monolith-shadow">
+            <StaggerItem className="group relative bg-white overflow-hidden monolith-shadow">
               <div className="aspect-[4/5] overflow-hidden">
                 <Image
                   alt="Smart Highway"
@@ -197,16 +217,16 @@ export default function ProjectsPage() {
                     Patna, Bihar
                   </span>
                   <Link
-                    href="#"
+                    href="/projects/patna-metro-dmrc"
                     className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-container hover:underline"
                   >
                     Read More
                   </Link>
                 </div>
               </div>
-            </div>
+            </StaggerItem>
             {/* Project Card 3 */}
-            <div className="group relative bg-white overflow-hidden monolith-shadow">
+            <StaggerItem className="group relative bg-white overflow-hidden monolith-shadow">
               <div className="aspect-[4/5] overflow-hidden">
                 <Image
                   alt="Energy Plant"
@@ -232,46 +252,55 @@ export default function ProjectsPage() {
                     Amravati, Maharashtra
                   </span>
                   <Link
-                    href="#"
+                    href="/projects/india-bulls-power-1350-mw"
                     className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-container hover:underline"
                   >
                     Read More
                   </Link>
                 </div>
               </div>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
+
       {/* Map View Section */}
       <section className="bg-surface-container-low py-24 overflow-hidden">
         <div className="max-w-screen-2xl mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
-            <div className="lg:col-span-1">
+            <SlideInLeft className="lg:col-span-1">
               <h2 className="font-headline text-5xl font-black text-primary tracking-tighter leading-tight mb-6">
                 Pan-India Execution Capability
               </h2>
               <p className="text-on-surface-variant text-lg mb-8">
                 We operate across multiple states, bringing specialized
-                engineering expertise to India's most important infrastructure
-                projects.
+                engineering expertise to India&apos;s most important
+                infrastructure projects.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-white rounded-lg monolith-shadow border-l-4 border-primary-container">
-                  <span className="text-primary font-black text-2xl">6+</span>
+              <StaggerContainer className="space-y-4">
+                <StaggerItem className="flex items-center gap-4 p-4 bg-white rounded-lg monolith-shadow border-l-4 border-primary-container">
+                  <CountUp
+                    end={6}
+                    suffix="+"
+                    className="text-primary font-black text-2xl"
+                  />
                   <span className="text-xs font-bold uppercase tracking-widest text-on-surface-variant">
                     Ongoing Projects
                   </span>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-white rounded-lg monolith-shadow border-l-4 border-primary-container">
-                  <span className="text-primary font-black text-2xl">10+</span>
+                </StaggerItem>
+                <StaggerItem className="flex items-center gap-4 p-4 bg-white rounded-lg monolith-shadow border-l-4 border-primary-container">
+                  <CountUp
+                    end={10}
+                    suffix="+"
+                    className="text-primary font-black text-2xl"
+                  />
                   <span className="text-xs font-bold uppercase tracking-widest text-on-surface-variant">
                     Completed Projects
                   </span>
-                </div>
-              </div>
-            </div>
-            <div className="lg:col-span-2 relative h-[500px] bg-surface-container-highest rounded-2xl overflow-hidden monolith-shadow">
+                </StaggerItem>
+              </StaggerContainer>
+            </SlideInLeft>
+            <SlideInRight className="lg:col-span-2 relative h-[500px] bg-surface-container-highest rounded-2xl overflow-hidden monolith-shadow">
               <div className="absolute inset-0 opacity-40 grayscale">
                 <Image
                   alt="Map background"
@@ -312,7 +341,7 @@ export default function ProjectsPage() {
                   Active Across India
                 </p>
               </div>
-            </div>
+            </SlideInRight>
           </div>
         </div>
       </section>

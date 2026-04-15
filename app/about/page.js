@@ -1,9 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-export const metadata = {
-  title: "About Us | HINDLAND Infrastructure",
-};
+import {
+  FadeInUp,
+  FadeIn,
+  SlideInLeft,
+  SlideInRight,
+  StaggerContainer,
+  StaggerItem,
+  CountUp,
+  ScaleIn,
+} from "../components/MotionWrappers";
 
 export default function AboutPage() {
   return (
@@ -23,65 +31,79 @@ export default function AboutPage() {
         </div>
         <div className="relative z-10 px-8 max-w-screen-2xl mx-auto w-full">
           <div className="max-w-3xl">
-            <span className="inline-block bg-primary-container text-white px-4 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
-              About Us
-            </span>
-            <h1 className="text-6xl md:text-8xl font-headline font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
-              Engineering Infrastructure That Powers India&apos;s Growth
-            </h1>
-            <div className="w-24 h-2 bg-white"></div>
+            <FadeInUp>
+              <span className="inline-block bg-primary-container text-white px-4 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+                About Us
+              </span>
+            </FadeInUp>
+            <FadeInUp delay={0.15}>
+              <h1 className="text-6xl md:text-8xl font-headline font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
+                Engineering Infrastructure That Powers India&apos;s Growth
+              </h1>
+            </FadeInUp>
+            <FadeInUp delay={0.3}>
+              <div className="w-24 h-2 bg-white"></div>
+            </FadeInUp>
           </div>
         </div>
       </section>
+
       {/* Our Story / Overview */}
       <section className="py-24 bg-surface px-8">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div className="lg:col-span-5">
+          <SlideInLeft className="lg:col-span-5">
             <p className="uppercase tracking-[0.3em] text-primary-container font-bold mb-4 text-xs">
               Who We Are
             </p>
             <h2 className="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight leading-tight mb-8">
               Multidisciplinary EPC & Industrial Expertise
             </h2>
-          </div>
-          <div className="lg:col-span-7 space-y-6">
+          </SlideInLeft>
+          <SlideInRight className="lg:col-span-7 space-y-6">
             <p className="text-lg text-on-surface-variant font-light leading-relaxed">
-              Hindland Infrastructure Pvt. Ltd. is a multidisciplinary engineering
-              and infrastructure company specializing in CHP (Coal Handling Plant)
-              Fabrication & Erection, CW & Utility Piping, and Solar EPC Projects.
+              Hindland Infrastructure Pvt. Ltd. is a multidisciplinary
+              engineering and infrastructure company specializing in CHP (Coal
+              Handling Plant) Fabrication & Erection, CW & Utility Piping, and
+              Solar EPC Projects.
             </p>
             <p className="text-lg text-on-surface-variant font-light leading-relaxed">
               We are committed to delivering world-class industrial and renewable
-              energy solutions with a focus on quality, precision, and safety. From
-              concept to commissioning, we ensure every project is executed on time,
-              within budget, and to the highest standards of engineering excellence.
+              energy solutions with a focus on quality, precision, and safety.
+              From concept to commissioning, we ensure every project is executed
+              on time, within budget, and to the highest standards of engineering
+              excellence.
             </p>
             <div className="grid grid-cols-2 gap-8 pt-8 border-t border-outline-variant/20">
               <div>
-                <span className="block text-4xl font-headline font-black text-primary">
-                  1000+
-                </span>
+                <CountUp
+                  end={1000}
+                  suffix="+"
+                  className="block text-4xl font-headline font-black text-primary"
+                />
                 <span className="text-xs uppercase tracking-widest text-on-surface-variant font-bold">
                   Skilled Workforce
                 </span>
               </div>
               <div>
-                <span className="block text-4xl font-headline font-black text-primary">
-                  50+
-                </span>
+                <CountUp
+                  end={50}
+                  suffix="+"
+                  className="block text-4xl font-headline font-black text-primary"
+                />
                 <span className="text-xs uppercase tracking-widest text-on-surface-variant font-bold">
                   Engineers & Leaders
                 </span>
               </div>
             </div>
-          </div>
+          </SlideInRight>
         </div>
       </section>
+
       {/* Mission, Vision & Values */}
       <section className="py-24 bg-surface-container-low px-8">
         <div className="max-w-screen-2xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/30 overflow-hidden rounded-lg monolith-shadow">
-            <div className="bg-surface p-12 flex flex-col items-start gap-6">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/30 overflow-hidden rounded-lg monolith-shadow">
+            <StaggerItem className="bg-surface p-12 flex flex-col items-start gap-6">
               <span className="material-symbols-outlined text-4xl text-primary-container">
                 account_balance
               </span>
@@ -90,12 +112,12 @@ export default function AboutPage() {
               </h3>
               <p className="text-on-surface-variant leading-relaxed">
                 To deliver high-quality and reliable project execution through
-                innovation and teamwork. To strengthen India&apos;s infrastructure
-                and energy growth by contributing to both thermal and renewable
-                sectors.
+                innovation and teamwork. To strengthen India&apos;s
+                infrastructure and energy growth by contributing to both thermal
+                and renewable sectors.
               </p>
-            </div>
-            <div className="bg-surface p-12 flex flex-col items-start gap-6">
+            </StaggerItem>
+            <StaggerItem className="bg-surface p-12 flex flex-col items-start gap-6">
               <span className="material-symbols-outlined text-4xl text-primary-container">
                 visibility
               </span>
@@ -104,11 +126,12 @@ export default function AboutPage() {
               </h3>
               <p className="text-on-surface-variant leading-relaxed">
                 To become a leading and trusted EPC company in India providing
-                integrated solutions for power, infrastructure, and renewable energy
-                projects, while promoting sustainable and safe engineering practices.
+                integrated solutions for power, infrastructure, and renewable
+                energy projects, while promoting sustainable and safe engineering
+                practices.
               </p>
-            </div>
-            <div className="bg-surface p-12 flex flex-col items-start gap-6">
+            </StaggerItem>
+            <StaggerItem className="bg-surface p-12 flex flex-col items-start gap-6">
               <span className="material-symbols-outlined text-4xl text-primary-container">
                 verified_user
               </span>
@@ -116,35 +139,24 @@ export default function AboutPage() {
                 Core Values
               </h3>
               <ul className="space-y-3 text-on-surface-variant font-medium">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-primary-container"></span>
-                  Quality
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-primary-container"></span>
-                  Integrity
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-primary-container"></span>
-                  Safety
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-primary-container"></span>
-                  Innovation
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-primary-container"></span>
-                  Teamwork
-                </li>
+                {["Quality", "Integrity", "Safety", "Innovation", "Teamwork"].map(
+                  (v) => (
+                    <li key={v} className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary-container"></span>
+                      {v}
+                    </li>
+                  )
+                )}
               </ul>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
+
       {/* Leadership Team */}
       <section className="py-24 bg-surface px-8 overflow-hidden">
         <div className="max-w-screen-2xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <FadeInUp className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div>
               <p className="uppercase tracking-[0.3em] text-primary-container font-bold mb-4 text-xs">
                 Board of Directors
@@ -153,9 +165,9 @@ export default function AboutPage() {
                 Visionary Leadership
               </h2>
             </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <div className="group text-center">
+          </FadeInUp>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <StaggerItem className="group text-center">
               <div className="relative h-[400px] overflow-hidden mb-6 bg-surface-container-low flex items-center justify-center">
                 <Image
                   className="w-full h-full object-cover"
@@ -177,8 +189,8 @@ export default function AboutPage() {
               <p className="text-xs uppercase tracking-widest text-primary-container font-bold mt-1">
                 Co-Founder & Managing Director
               </p>
-            </div>
-            <div className="group text-center">
+            </StaggerItem>
+            <StaggerItem className="group text-center">
               <div className="relative h-[400px] overflow-hidden mb-6 bg-surface-container-low flex items-center justify-center">
                 <Image
                   className="w-full h-full object-cover"
@@ -200,14 +212,15 @@ export default function AboutPage() {
               <p className="text-xs uppercase tracking-widest text-primary-container font-bold mt-1">
                 Director – Projects, B.Tech (Mechanical Engineering)
               </p>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
+
       {/* Certifications & Quality */}
       <section className="py-24 bg-surface-container-high px-8">
         <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
-          <div className="lg:w-1/2">
+          <SlideInLeft className="lg:w-1/2">
             <p className="uppercase tracking-[0.3em] text-primary-container font-bold mb-4 text-xs">
               Quality Assurance
             </p>
@@ -217,8 +230,8 @@ export default function AboutPage() {
             <p className="text-lg text-on-surface-variant font-light leading-relaxed mb-8">
               {`Our operations are strictly aligned with international safety and quality benchmarks. We don't just build; we certify every stage of development through rigorous independent auditing.`}
             </p>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-surface p-6 flex items-center gap-4 rounded monolith-shadow">
+            <StaggerContainer className="grid grid-cols-2 gap-4">
+              <StaggerItem className="bg-surface p-6 flex items-center gap-4 rounded monolith-shadow">
                 <div className="w-10 h-10 bg-primary/10 flex items-center justify-center rounded">
                   <span className="material-symbols-outlined text-primary text-xl">
                     high_quality
@@ -228,23 +241,29 @@ export default function AboutPage() {
                   <p className="font-bold text-on-surface uppercase text-xs">
                     ISO 9001:2015
                   </p>
-                  <p className="text-[10px] text-on-surface-variant">Quality Management</p>
+                  <p className="text-[10px] text-on-surface-variant">
+                    Quality Management
+                  </p>
                 </div>
-              </div>
-              <div className="bg-surface p-6 flex items-center gap-4 rounded monolith-shadow">
+              </StaggerItem>
+              <StaggerItem className="bg-surface p-6 flex items-center gap-4 rounded monolith-shadow">
                 <div className="w-10 h-10 bg-primary/10 flex items-center justify-center rounded">
                   <span className="material-symbols-outlined text-primary text-xl">
                     health_and_safety
                   </span>
                 </div>
                 <div>
-                  <p className="font-bold text-on-surface uppercase text-xs">ISO 45001</p>
-                  <p className="text-[10px] text-on-surface-variant">OH&S Standard</p>
+                  <p className="font-bold text-on-surface uppercase text-xs">
+                    ISO 45001
+                  </p>
+                  <p className="text-[10px] text-on-surface-variant">
+                    OH&S Standard
+                  </p>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="lg:w-1/2">
+              </StaggerItem>
+            </StaggerContainer>
+          </SlideInLeft>
+          <ScaleIn className="lg:w-1/2">
             <div className="relative p-12 bg-white rounded-lg monolith-shadow border-l-8 border-primary-container">
               <span className="material-symbols-outlined text-primary/10 text-9xl absolute -top-4 -right-4">
                 military_tech
@@ -262,9 +281,10 @@ export default function AboutPage() {
                 </span>
               </div>
             </div>
-          </div>
+          </ScaleIn>
         </div>
       </section>
+
       {/* CTA */}
       <section className="py-24 bg-primary text-white px-8 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -277,7 +297,7 @@ export default function AboutPage() {
             unoptimized
           />
         </div>
-        <div className="relative z-10 max-w-screen-2xl mx-auto text-center flex flex-col items-center">
+        <FadeInUp className="relative z-10 max-w-screen-2xl mx-auto text-center flex flex-col items-center">
           <h2 className="text-4xl md:text-6xl font-headline font-black uppercase tracking-tighter mb-8 max-w-4xl">
             Let&apos;s Build Reliable Infrastructure Together
           </h2>
@@ -299,7 +319,7 @@ export default function AboutPage() {
               Download Brochure
             </Link>
           </div>
-        </div>
+        </FadeInUp>
       </section>
     </main>
   );
