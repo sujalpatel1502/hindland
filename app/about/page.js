@@ -12,12 +12,13 @@ import {
   CountUp,
   ScaleIn,
 } from "../components/MotionWrappers";
+import BrochureButton from "../components/BrochureButton";
 
 export default function AboutPage() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative h-[614px] flex items-center justify-start overflow-hidden">
+      <section className="relative min-h-[480px] h-[55vh] md:h-[614px] flex items-center justify-start overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             alt="Infrastructure Project"
@@ -29,15 +30,15 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
         </div>
-        <div className="relative z-10 px-8 max-w-screen-2xl mx-auto w-full">
-          <div className="max-w-3xl">
+        <div className="relative z-10 px-4 sm:px-8 max-w-screen-2xl mx-auto w-full min-w-0">
+          <div className="max-w-3xl w-full min-w-0">
             <FadeInUp>
               <span className="inline-block bg-primary-container text-white px-4 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
                 About Us
               </span>
             </FadeInUp>
             <FadeInUp delay={0.15}>
-              <h1 className="text-6xl md:text-8xl font-headline font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
+              <h1 className="text-[clamp(1.65rem,6.5vw,2.75rem)] sm:text-4xl md:text-6xl lg:text-8xl font-headline font-black text-white leading-[1.02] sm:leading-[0.98] md:leading-[0.9] tracking-tight sm:tracking-tighter uppercase mb-8 wrap-break-word">
                 Engineering Infrastructure That Powers India&apos;s Growth
               </h1>
             </FadeInUp>
@@ -153,22 +154,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Team */}
-      <section className="py-24 bg-surface px-8 overflow-hidden">
+      {/* Leadership Team — 2-up on mobile so both directors share one row */}
+      <section className="py-16 md:py-24 bg-surface px-4 sm:px-8 overflow-hidden">
         <div className="max-w-screen-2xl mx-auto">
-          <FadeInUp className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div>
-              <p className="uppercase tracking-[0.3em] text-primary-container font-bold mb-4 text-xs">
+          <FadeInUp className="mb-10 md:mb-16 md:flex md:flex-row md:justify-between md:items-end md:gap-8">
+            <div className="flex flex-row md:flex-col items-baseline md:items-start gap-3 md:gap-0 min-w-0">
+              <p className="uppercase tracking-[0.2em] md:tracking-[0.3em] text-primary-container font-bold text-[10px] sm:text-xs shrink-0 mb-0 md:mb-4">
                 Board of Directors
               </p>
-              <h2 className="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-headline font-bold text-on-surface tracking-tight leading-tight min-w-0 flex-1 md:flex-none">
                 Visionary Leadership
               </h2>
             </div>
           </FadeInUp>
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <StaggerItem className="group text-center">
-              <div className="relative h-[400px] overflow-hidden mb-6 bg-surface-container-low flex items-center justify-center">
+          <StaggerContainer className="grid grid-cols-2 gap-2.5 sm:gap-4 md:gap-8 max-w-3xl mx-auto">
+            <StaggerItem className="group min-w-0 text-center">
+              <div className="relative h-[200px] sm:h-[260px] md:h-[400px] w-full overflow-hidden mb-2 sm:mb-3 md:mb-6 bg-surface-container-low flex items-center justify-center">
                 <Image
                   className="w-full h-full object-cover"
                   alt="S. K. Singh"
@@ -177,21 +178,21 @@ export default function AboutPage() {
                   height={750}
                   unoptimized
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary/90 to-transparent opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 hidden md:block p-6 bg-linear-to-t from-primary/90 to-transparent opacity-100 transition-opacity duration-300">
                   <p className="text-white text-xs leading-relaxed italic">
                     {`"It gives me immense pride to introduce Hindland Infrastructure — a company built on strong values of integrity, innovation, and engineering excellence."`}
                   </p>
                 </div>
               </div>
-              <h4 className="text-xl font-headline font-bold uppercase text-on-surface">
+              <h4 className="text-[11px] sm:text-sm md:text-xl font-headline font-bold uppercase text-on-surface leading-tight">
                 S. K. Singh
               </h4>
-              <p className="text-xs uppercase tracking-widest text-primary-container font-bold mt-1">
+              <p className="text-[8px] sm:text-[10px] md:text-xs uppercase tracking-wide md:tracking-widest text-primary-container font-bold mt-0.5 sm:mt-1 leading-snug">
                 Co-Founder & Managing Director
               </p>
             </StaggerItem>
-            <StaggerItem className="group text-center">
-              <div className="relative h-[400px] overflow-hidden mb-6 bg-surface-container-low flex items-center justify-center">
+            <StaggerItem className="group min-w-0 text-center">
+              <div className="relative h-[200px] sm:h-[260px] md:h-[400px] w-full overflow-hidden mb-2 sm:mb-3 md:mb-6 bg-surface-container-low flex items-center justify-center">
                 <Image
                   className="w-full h-full object-cover"
                   alt="Ashish Singh"
@@ -200,16 +201,16 @@ export default function AboutPage() {
                   height={750}
                   unoptimized
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary/90 to-transparent opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 hidden md:block p-6 bg-linear-to-t from-primary/90 to-transparent opacity-100 transition-opacity duration-300">
                   <p className="text-white text-xs leading-relaxed italic">
                     {`"With over 12 years of hands-on experience in thermal power projects, I have learned that success lies in precision, teamwork, and commitment."`}
                   </p>
                 </div>
               </div>
-              <h4 className="text-xl font-headline font-bold uppercase text-on-surface">
+              <h4 className="text-[11px] sm:text-sm md:text-xl font-headline font-bold uppercase text-on-surface leading-tight">
                 Ashish Singh
               </h4>
-              <p className="text-xs uppercase tracking-widest text-primary-container font-bold mt-1">
+              <p className="text-[8px] sm:text-[10px] md:text-xs uppercase tracking-wide md:tracking-widest text-primary-container font-bold mt-0.5 sm:mt-1 leading-snug line-clamp-3 md:line-clamp-none">
                 Director – Projects, B.Tech (Mechanical Engineering)
               </p>
             </StaggerItem>
@@ -275,7 +276,7 @@ export default function AboutPage() {
                 {`"Rigorous safety practices, trained manpower, and site discipline to reduce risk and ensure compliance on every Hindland site."`}
               </p>
               <div className="flex items-center gap-4">
-                <div className="h-px bg-outline-variant flex-grow"></div>
+                <div className="h-px bg-outline-variant grow"></div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-primary-container">
                   Safety & Quality Team
                 </span>
@@ -312,12 +313,12 @@ export default function AboutPage() {
             >
               Contact Us
             </Link>
-            <Link
-              href="/projects"
-              className="border border-white/30 text-white px-10 py-4 font-headline font-bold uppercase tracking-widest text-sm backdrop-blur-md hover:bg-white/10 transition-all"
+            <BrochureButton
+              source="about_cta"
+              className="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-10 py-4 font-headline font-bold uppercase tracking-widest text-sm backdrop-blur-md hover:bg-white/10 transition-all"
             >
               Download Brochure
-            </Link>
+            </BrochureButton>
           </div>
         </FadeInUp>
       </section>

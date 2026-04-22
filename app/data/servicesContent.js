@@ -5,15 +5,15 @@ export const services = [
     title: "Heavy Fabrication & Erection",
     shortTitle: "Heavy Fabrication & Erection",
     icon: "construction",
-    heroImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCetZZ4i9_T2L0g3JP9Fgfk_8PzA9cgErWqCYaR-EdTz1SYSbdcaP-bZYa-XuGC7k8eKBC0IpRR95O7OU0CaMyEpyQoEzWAdkRVEXvkWVoa6ATrgqqjU1T2kfmE8hvyspB0d4Y61TVTkBsH7BN2pPSEeQvb2-pfuR9iRWZ-Todm8aQQ8MD1TtWZ-xLX3mlQc-oy2f_-Zft5efYchN78k_5wZUFCgVWD3fiYs7IFaM7B5v8i5Ejy4YZ5Qkdh9Nauq_Tc0UrS5nLsZayN",
-    cardImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB2QhRCfafxtCEF_VRhOau0IDgmm60IwjSjSHLihPS97L55HGnW777w9UHu3qyb1QSy5WjlqXwLc2-v6-DpYWTAwH_f8Bt80_6ejsnG9fcNvg8kCXh4onXqlwmrty6063-dx7bLHiqrYZkInfItB2MDfgnJYj75m0Ki-a6Hb6iKMQcwP6XDcfnQw81ZVlO7ZajgFk1WiAdqCaAgnWQXjJAhuEGcSoQ59EixoHYMHkKs4cNQMYJ2neFrKOr386Gau6a_dTNKUQm-X2iO",
+    heroImage: "https://storage.googleapis.com/art-docs/HF1.jpg",
+    cardImage: "https://storage.googleapis.com/art-docs/HF2.jpg",
     summary:
       "Complete project execution for industrial and infrastructure projects with strong expertise in thermal power and heavy engineering works — delivered with strict safety and quality controls.",
     bullets: [
       "BTG / TG / Boiler structural fabrication & erection, CHP execution & expansion works",
     ],
+    tags: ["EPC", "Fabrication & Erection", "Commissioning Support"],
+    bestFor: "Thermal Power • Steel • Cement • Chemical • Infrastructure • Railways",
     description:
       "Hindland delivers end-to-end heavy fabrication and erection for thermal power plants, industrial facilities, and infrastructure projects. Our teams manage structural steel, equipment erection, alignment, and handover with documented QA/QC and site safety leadership.",
     facts: [
@@ -29,9 +29,9 @@ export const services = [
       { label: "Safety", value: "Zero-harm" },
     ],
     gallery: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCetZZ4i9_T2L0g3JP9Fgfk_8PzA9cgErWqCYaR-EdTz1SYSbdcaP-bZYa-XuGC7k8eKBC0IpRR95O7OU0CaMyEpyQoEzWAdkRVEXvkWVoa6ATrgqqjU1T2kfmE8hvyspB0d4Y61TVTkBsH7BN2pPSEeQvb2-pfuR9iRWZ-Todm8aQQ8MD1TtWZ-xLX3mlQc-oy2f_-Zft5efYchN78k_5wZUFCgVWD3fiYs7IFaM7B5v8i5Ejy4YZ5Qkdh9Nauq_Tc0UrS5nLsZayN",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB2QhRCfafxtCEF_VRhOau0IDgmm60IwjSjSHLihPS97L55HGnW777w9UHu3qyb1QSy5WjlqXwLc2-v6-DpYWTAwH_f8Bt80_6ejsnG9fcNvg8kCXh4onXqlwmrty6063-dx7bLHiqrYZkInfItB2MDfgnJYj75m0Ki-a6Hb6iKMQcwP6XDcfnQw81ZVlO7ZajgFk1WiAdqCaAgnWQXjJAhuEGcSoQ59EixoHYMHkKs4cNQMYJ2neFrKOr386Gau6a_dTNKUQm-X2iO",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDAMq-qQ9lAikmrfvSIE2sst31Jp9Wl2fFG7aAvGbQ8_rfu1ymyTBnebOt8nQIidgffZeb_hKLdDGuMmNVw-X-qFNTVmbY_DwY06eVfeRQvmFJ-oq6LUadM4IizlkAoZIcTba0-Dr3RiK6AbdGNDZcrJke4f2CDntXeLviQZAlFqiLPDqHVd6_RAtnDdxHlT4kDKmsX4r6t28OKmWohY6orYgmA8ixtMYY5LetMhz4uxe7EEamSZqcGBvEwLcZbvg_-oYSzpPlKOY_g",
+      "https://storage.googleapis.com/art-docs/HF3.jpg",
+      "https://storage.googleapis.com/art-docs/HF4.webp",
+      "https://storage.googleapis.com/art-docs/HF5.png",
     ],
     capabilities: [
       {
@@ -62,16 +62,16 @@ export const services = [
     title: "O&M Services",
     shortTitle: "O&M Services",
     icon: "build",
-    heroImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDAMq-qQ9lAikmrfvSIE2sst31Jp9Wl2fFG7aAvGbQ8_rfu1ymyTBnebOt8nQIidgffZeb_hKLdDGuMmNVw-X-qFNTVmbY_DwY06eVfeRQvmFJ-oq6LUadM4IizlkAoZIcTba0-Dr3RiK6AbdGNDZcrJke4f2CDntXeLviQZAlFqiLPDqHVd6_RAtnDdxHlT4kDKmsX4r6t28OKmWohY6orYgmA8ixtMYY5LetMhz4uxe7EEamSZqcGBvEwLcZbvg_-oYSzpPlKOY_g",
-    cardImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCJ7LnThDKXWc8KKMRklXt2FbGTmTv4lPALsHWJPxcY66Ck-D9xpxuf5WTNmpRVc06P3Mw0kcULeskFwnyhdpgeZfEUTcAj6S5cQvJPq9giLtQhq0Ib4wLhhIzgVkcAw9Dmv7rOgFqgeLHQX-5zlgFEWEKTBjC2tuCYksLrtgBTOlyuUtIHinrLTdWpJ4kqBPfuWS7wo8yP9gbqcvPiiQC2Mvz4dqiGP7xreZ0Q2QwHBeK4P760BaK0soC28AmzV-lJbj7am1MtwHp6",
+    heroImage: "https://storage.googleapis.com/art-docs/O%26M1.jpg",
+    cardImage: "https://storage.googleapis.com/art-docs/O%26M2.jpg",
     summary:
       "Reliable operations and maintenance services designed to reduce downtime, improve plant performance, and extend asset life with structured preventive and breakdown maintenance.",
     bullets: [
       "CHP operation & maintenance",
       "Preventive maintenance & shutdown support",
     ],
+    tags: ["O&M", "Preventive Maintenance", "Shutdown Support"],
+    bestFor: "Improved reliability • Lower operating costs • Faster recovery",
     description:
       "Our O&M teams support coal handling plants and allied systems with trained manpower, preventive maintenance schedules, breakdown response, and shutdown execution — helping clients achieve stable throughput and safer operations.",
     facts: [
@@ -87,9 +87,9 @@ export const services = [
       { label: "Shutdowns", value: "Planned" },
     ],
     gallery: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDAMq-qQ9lAikmrfvSIE2sst31Jp9Wl2fFG7aAvGbQ8_rfu1ymyTBnebOt8nQIidgffZeb_hKLdDGuMmNVw-X-qFNTVmbY_DwY06eVfeRQvmFJ-oq6LUadM4IizlkAoZIcTba0-Dr3RiK6AbdGNDZcrJke4f2CDntXeLviQZAlFqiLPDqHVd6_RAtnDdxHlT4kDKmsX4r6t28OKmWohY6orYgmA8ixtMYY5LetMhz4uxe7EEamSZqcGBvEwLcZbvg_-oYSzpPlKOY_g",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCJ7LnThDKXWc8KKMRklXt2FbGTmTv4lPALsHWJPxcY66Ck-D9xpxuf5WTNmpRVc06P3Mw0kcULeskFwnyhdpgeZfEUTcAj6S5cQvJPq9giLtQhq0Ib4wLhhIzgVkcAw9Dmv7rOgFqgeLHQX-5zlgFEWEKTBjC2tuCYksLrtgBTOlyuUtIHinrLTdWpJ4kqBPfuWS7wo8yP9gbqcvPiiQC2Mvz4dqiGP7xreZ0Q2QwHBeK4P760BaK0soC28AmzV-lJbj7am1MtwHp6",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCetZZ4i9_T2L0g3JP9Fgfk_8PzA9cgErWqCYaR-EdTz1SYSbdcaP-bZYa-XuGC7k8eKBC0IpRR95O7OU0CaMyEpyQoEzWAdkRVEXvkWVoa6ATrgqqjU1T2kfmE8hvyspB0d4Y61TVTkBsH7BN2pPSEeQvb2-pfuR9iRWZ-Todm8aQQ8MD1TtWZ-xLX3mlQc-oy2f_-Zft5efYchN78k_5wZUFCgVWD3fiYs7IFaM7B5v8i5Ejy4YZ5Qkdh9Nauq_Tc0UrS5nLsZayN",
+      "https://storage.googleapis.com/art-docs/O%26M3.webp",
+      "https://storage.googleapis.com/art-docs/O%26M4.jpg",
+      "https://storage.googleapis.com/art-docs/O%26M5.jpg",
     ],
     capabilities: [
       {
@@ -115,21 +115,195 @@ export const services = [
     ],
   },
   {
+    slug: "utility-management",
+    label: "03. Facility Management",
+    title: "Utility Management",
+    shortTitle: "Utility Management",
+    icon: "settings_suggest",
+    heroImage: "https://storage.googleapis.com/art-docs/UM1.webp",
+    cardImage: "https://storage.googleapis.com/art-docs/UM2.jpg",
+    summary:
+      "Integrated facility support services for industrial environments — combining technical maintenance, utilities monitoring, and operational manpower for smooth day-to-day functioning.",
+    bullets: [
+      "Mechanical & utility maintenance support",
+      "Utility monitoring & compliance-oriented assistance",
+    ],
+    tags: ["FM", "Utilities", "Manpower"],
+    bestFor: "Power Stations • Manufacturing Plants • Large Industrial Facilities",
+    description:
+      "Hindland provides integrated facility management for large industrial plants — combining skilled technical manpower, utility monitoring, housekeeping, and equipment servicing to keep operations reliable and compliant day after day.",
+    facts: [
+      { icon: "settings_suggest", label: "Focus", value: "Integrated FM & utilities" },
+      { icon: "domain", label: "Sectors", value: "Power & manufacturing" },
+      { icon: "groups", label: "Workforce", value: "Skilled & semi-skilled" },
+      { icon: "rule", label: "Approach", value: "Compliance-oriented" },
+    ],
+    highlights: [
+      { label: "Coverage", value: "24x7" },
+      { label: "Manpower", value: "Deployable" },
+      { label: "Utilities", value: "Monitored" },
+      { label: "Response", value: "Structured" },
+    ],
+    gallery: [
+      "https://storage.googleapis.com/art-docs/UM3.png",
+      "https://storage.googleapis.com/art-docs/UM4.jpg",
+      "https://storage.googleapis.com/art-docs/UM5.jpg",
+    ],
+    capabilities: [
+      {
+        icon: "handyman",
+        title: "Mechanical & Utility Maintenance",
+        text: "Day-to-day mechanical and utility system maintenance for uninterrupted plant operations.",
+      },
+      {
+        icon: "task_alt",
+        title: "Inspections & Servicing",
+        text: "Scheduled equipment inspections, servicing routines, and preventive checks.",
+      },
+      {
+        icon: "cleaning_services",
+        title: "Housekeeping & Plant Cleaning",
+        text: "Industrial housekeeping and plant cleaning support aligned with safety norms.",
+      },
+      {
+        icon: "groups",
+        title: "Workforce Deployment",
+        text: "Skilled and semi-skilled manpower deployment, supervised and compliance-ready.",
+      },
+    ],
+  },
+  {
+    slug: "crusher-mining-support",
+    label: "04. Mining & Materials",
+    title: "Crusher & Mining Support",
+    shortTitle: "Crusher & Mining Support",
+    icon: "landscape",
+    heroImage: "https://storage.googleapis.com/art-docs/CMS1.jpg",
+    cardImage: "https://storage.googleapis.com/art-docs/CMS2.jpg",
+    summary:
+      "Engineering and maintenance support for mining and mineral processing operations — focused on safety, throughput, and long-term operational efficiency.",
+    bullets: [
+      "Bulk material handling systems support",
+      "Crushing & screening plant execution and maintenance",
+    ],
+    tags: ["Mining", "Material Handling", "Plant Support"],
+    bestFor: "Higher availability • Safer operations • Reduced breakdowns",
+    description:
+      "Hindland supports mining and mineral processing operations with specialized engineering, fabrication, erection, and maintenance services for crushers, conveyors, and bulk material handling systems — keeping throughput steady and sites safer.",
+    facts: [
+      { icon: "landscape", label: "Focus", value: "Crusher & MH systems" },
+      { icon: "domain", label: "Sectors", value: "Mining & minerals" },
+      { icon: "speed", label: "Outcome", value: "Higher availability" },
+      { icon: "health_and_safety", label: "Safety", value: "Site-first culture" },
+    ],
+    highlights: [
+      { label: "Systems", value: "Bulk MH" },
+      { label: "Plants", value: "Crushing" },
+      { label: "Maintenance", value: "Mechanical" },
+      { label: "Outages", value: "Supported" },
+    ],
+    gallery: [
+      "https://storage.googleapis.com/art-docs/CMS3.webp",
+      "https://storage.googleapis.com/art-docs/CMS4.jpg",
+      "https://storage.googleapis.com/art-docs/CMS5.jpg",
+    ],
+    capabilities: [
+      {
+        icon: "category",
+        title: "Bulk Material Handling",
+        text: "Execution and support for bulk material handling systems across plant areas.",
+      },
+      {
+        icon: "construction",
+        title: "Crushing & Screening",
+        text: "Crushing and screening plant execution and maintenance for steady throughput.",
+      },
+      {
+        icon: "foundation",
+        title: "Structural Works",
+        text: "Fabrication and erection of structures supporting crushers, conveyors, and feeders.",
+      },
+      {
+        icon: "build_circle",
+        title: "Maintenance & Shutdowns",
+        text: "Mechanical maintenance and shutdown assistance to minimize downtime.",
+      },
+    ],
+  },
+  {
+    slug: "b2b-material-supply",
+    label: "05. Trading & Supply",
+    title: "B2B Construction Material Supply",
+    shortTitle: "B2B Material Supply",
+    icon: "inventory_2",
+    heroImage: "https://storage.googleapis.com/art-docs/B2B1.jpg",
+    cardImage: "https://storage.googleapis.com/art-docs/B2B2.jpeg",
+    summary:
+      "Strong sourcing and supply capabilities for industrial and construction materials — ensuring reliable availability, quality assurance, and competitive pricing.",
+    bullets: [
+      "Structural steel, TMT bars & cement (OPC 43 / OPC 53)",
+      "Crusher materials, aggregates & bitumen products",
+    ],
+    tags: ["Trading", "Supply Chain", "Industrial Materials"],
+    bestFor: "Reliable supply chain • Compliance-grade materials • Timely dispatch",
+    description:
+      "Hindland offers B2B trading and supply of structural steel, cement, aggregates, bitumen, PVC pipes, lubricants, and petroleum products — backed by strong sourcing partners and a compliance-focused supply chain for infrastructure clients.",
+    facts: [
+      { icon: "inventory_2", label: "Focus", value: "Construction materials" },
+      { icon: "local_shipping", label: "Dispatch", value: "Timely & tracked" },
+      { icon: "verified", label: "Quality", value: "Compliance-grade" },
+      { icon: "handshake", label: "Model", value: "B2B supply" },
+    ],
+    highlights: [
+      { label: "Sourcing", value: "Reliable" },
+      { label: "Materials", value: "Certified" },
+      { label: "Pricing", value: "Competitive" },
+      { label: "Dispatch", value: "On-time" },
+    ],
+    gallery: [
+      "https://storage.googleapis.com/art-docs/B2B3.webp",
+      "https://storage.googleapis.com/art-docs/B2B4.jpg",
+      "https://storage.googleapis.com/art-docs/B2B5.jpg",
+    ],
+    capabilities: [
+      {
+        icon: "iron",
+        title: "Structural Steel & TMT",
+        text: "Structural steel sections and TMT bars for infrastructure and industrial projects.",
+      },
+      {
+        icon: "foundation",
+        title: "Cement & Aggregates",
+        text: "OPC 43 / OPC 53 cement, crusher materials, and aggregates in bulk.",
+      },
+      {
+        icon: "opacity",
+        title: "Bitumen & Petroleum",
+        text: "Bitumen, bitumen products, lubricants, and petroleum-grade supplies.",
+      },
+      {
+        icon: "plumbing",
+        title: "PVC & Allied Products",
+        text: "PVC pipes and allied industrial products with compliance-grade sourcing.",
+      },
+    ],
+  },
+  {
     slug: "solar-epc-renewables",
-    label: "03. Renewables",
-    title: "Solar EPC & Renewables",
+    label: "06. Renewables",
+    title: "Solar EPC & Renewable Energy",
     shortTitle: "Solar EPC & Renewables",
     icon: "solar_power",
-    heroImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBeS1NTNiarV9UVPZtAbB2fO-Faku4iydtpTdJyiHilUYpDvVBlx3EuKUE9nZJxtMtst0C_8fm3sg7Q3vUOAiCsKvAcWzBuzA6m-K8Hoa1-o8TRb_c_KT6owZVChMX7p2FYZWWM91vQa7k5SixZPMByTIxJ0BVttNJX4rGLm8BCnGoqLB-o6B-IILc4vauVxm4-YkLQwr1v3xO0xLBXB19F5Bpe6YcG3fiyBBBmF9h1tUSyUiOhgOzBPDP5-EOGH67iiCe3K0pj5Z_b",
-    cardImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBeS1NTNiarV9UVPZtAbB2fO-Faku4iydtpTdJyiHilUYpDvVBlx3EuKUE9nZJxtMtst0C_8fm3sg7Q3vUOAiCsKvAcWzBuzA6m-K8Hoa1-o8TRb_c_KT6owZVChMX7p2FYZWWM91vQa7k5SixZPMByTIxJ0BVttNJX4rGLm8BCnGoqLB-o6B-IILc4vauVxm4-YkLQwr1v3xO0xLBXB19F5Bpe6YcG3fiyBBBmF9h1tUSyUiOhgOzBPDP5-EOGH67iiCe3K0pj5Z_b",
+    heroImage: "https://storage.googleapis.com/art-docs/SER1.png",
+    cardImage: "https://storage.googleapis.com/art-docs/SER2.webp",
     summary:
-      "Solar EPC execution for utility and industrial clients — from design coordination to commissioning, including ground-mounted and rooftop installations.",
+      "Renewable energy execution capabilities for solar projects — designed for scalable deployment, strong engineering controls, and reliable project handover.",
     bullets: [
       "Solar EPC execution (utility / industrial)",
       "Ground & rooftop solar projects",
     ],
+    tags: ["Renewables", "Solar EPC", "O&M"],
+    bestFor: "Safe execution • Efficient delivery • Sustainable growth",
     description:
       "Hindland supports renewable energy growth with disciplined solar EPC delivery: civil and structural balance, module mounting, electrical works, testing, and commissioning support aligned with client standards and grid requirements.",
     facts: [
@@ -145,9 +319,9 @@ export const services = [
       { label: "Handover", value: "Commissioned" },
     ],
     gallery: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBeS1NTNiarV9UVPZtAbB2fO-Faku4iydtpTdJyiHilUYpDvVBlx3EuKUE9nZJxtMtst0C_8fm3sg7Q3vUOAiCsKvAcWzBuzA6m-K8Hoa1-o8TRb_c_KT6owZVChMX7p2FYZWWM91vQa7k5SixZPMByTIxJ0BVttNJX4rGLm8BCnGoqLB-o6B-IILc4vauVxm4-YkLQwr1v3xO0xLBXB19F5Bpe6YcG3fiyBBBmF9h1tUSyUiOhgOzBPDP5-EOGH67iiCe3K0pj5Z_b",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCNBpcdIUOTrPFucUt_WZPEaQkMHPYWQuJE7ONvIA5ONIQnFLBi4BazJu78PWMMDGy-ESF9EtAdjZk4hLrczrb8LYavsICaiOHpdnQ3Fwmhsp4c7jEy4rJmRAXT-_523D2tfcpw7W2Orz_lgN4MNH-63bhiZKNbtPKER0aK9SypcjLSvtaGm_fMzvcFCIfH3ms97ndsTso1G-gywqjjMEn9nwMMN36_Q5LuX7pUfBRKygLi4IaqDBGSNP3xH8Q6aByo55hY3hbMOL-g",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBBgTkBaGYHndu4p1eirgNjb5-5PsZ-CUKf9Eeu8ijtw7U-9aOw5RkUqsLElDQkOX30rU8KC2-nZXwr6GF2FexIr8N2-llSIP5HfJnGHeFhZNs3hsvAG99_x637_Cm9zTzyhdeiukvySINSjKwy4BhPSj1fudGR66MASGBLlC3zwRJNSd9khJ1s4CFiPRZp_Qc5NGngkMTA6a21_tVfXx1bYuqUNzimYxq5qp0AD79qDn_PS7h0qbt5B-gzFmvhsWu7N6E9GiXTqEy_",
+      "https://storage.googleapis.com/art-docs/SER3.jpg",
+      "https://storage.googleapis.com/art-docs/SER4.png",
+      "https://storage.googleapis.com/art-docs/SER5.jpg",
     ],
     capabilities: [
       {

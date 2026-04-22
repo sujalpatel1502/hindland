@@ -24,20 +24,39 @@ export default function Footer() {
             company delivering excellence in CHP/AHP systems, piping,
             structural works, and O&amp;M support across India.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             <a
-              href="#"
-              className="w-8 h-8 bg-stone-200 flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all"
+              href="https://www.facebook.com/hindlandinfra/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Hindland Infrastructure on Facebook"
+              className="w-9 h-9 bg-stone-200 flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all"
             >
-              <span className="material-symbols-outlined text-sm">share</span>
+              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+                <path d="M13.5 8.5V6.8c0-.6.4-1 1-1h1.5V3h-2.6C10.9 3 9.5 4.5 9.5 7v1.5H7V12h2.5v9h4v-9H16l.5-3.5h-3z" />
+              </svg>
             </a>
             <a
-              href="#"
-              className="w-8 h-8 bg-stone-200 flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all"
+              href="https://www.linkedin.com/company/hindland-infrastructure/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Hindland Infrastructure on LinkedIn"
+              className="w-9 h-9 bg-stone-200 flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all"
             >
-              <span className="material-symbols-outlined text-sm">
-                alternate_email
-              </span>
+              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+                <path d="M6.9 8.7H3.6V20h3.3zM5.3 3.4a1.9 1.9 0 100 3.8 1.9 1.9 0 000-3.8zM20.4 12.8c0-3.1-1.7-4.5-4-4.5-1.8 0-2.6 1-3 1.7V8.7h-3.2V20h3.3v-5.6c0-1.5.3-2.9 2.1-2.9s1.8 1.7 1.8 3V20H21v-7.2z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/hindland_infrastructure"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Hindland Infrastructure on Instagram"
+              className="w-9 h-9 bg-stone-200 flex items-center justify-center rounded-full hover:bg-primary hover:text-white transition-all"
+            >
+              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+                <path d="M7.5 3h9A4.5 4.5 0 0121 7.5v9a4.5 4.5 0 01-4.5 4.5h-9A4.5 4.5 0 013 16.5v-9A4.5 4.5 0 017.5 3zm0 1.8a2.7 2.7 0 00-2.7 2.7v9a2.7 2.7 0 002.7 2.7h9a2.7 2.7 0 002.7-2.7v-9a2.7 2.7 0 00-2.7-2.7h-9zm9.5 1.4a1.1 1.1 0 100 2.2 1.1 1.1 0 000-2.2zM12 8a4 4 0 110 8 4 4 0 010-8zm0 1.8a2.2 2.2 0 100 4.4 2.2 2.2 0 000-4.4z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -137,13 +156,13 @@ export default function Footer() {
           All Rights Reserved.
         </p>
         <div className="flex gap-8">
-          <a href="#" className="text-xs text-stone-500 hover:text-primary-container">
+          <a href="https://www.linkedin.com/company/hindland-infrastructure/" target="_blank" rel="noopener noreferrer" className="text-xs text-stone-500 hover:text-primary-container">
             LinkedIn
           </a>
-          <a href="#" className="text-xs text-stone-500 hover:text-primary-container">
+          <a href="https://www.facebook.com/hindlandinfra/" target="_blank" rel="noopener noreferrer" className="text-xs text-stone-500 hover:text-primary-container">
             Facebook
           </a>
-          <a href="#" className="text-xs text-stone-500 hover:text-primary-container">
+          <a href="https://www.instagram.com/hindland_infrastructure" target="_blank" rel="noopener noreferrer" className="text-xs text-stone-500 hover:text-primary-container">
             Instagram
           </a>
         </div>

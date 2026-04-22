@@ -43,7 +43,7 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="mt-20 relative h-[calc(100dvh-5rem)] flex flex-col overflow-hidden">
+      <section className="mt-20 relative h-[calc(100svh-5rem)] md:h-[calc(100dvh-5rem)] flex flex-col overflow-hidden">
         <div className="absolute inset-0 z-0">
           {heroBanners.map((banner, index) => (
             <Image
@@ -60,7 +60,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-black/45"></div>
         </div>
 
-        <div className="relative z-10 flex-1 flex flex-col justify-start max-w-screen-2xl mx-auto px-6 md:px-8 w-full pt-14 md:pt-16 pb-6 md:pb-8">
+        <div className="relative z-10 flex-1 flex flex-col justify-start max-w-screen-2xl mx-auto px-6 md:px-8 w-full pt-10 md:pt-16 pb-4 md:pb-8">
           <FadeIn className="mb-4 flex items-center gap-2">
             <button
               type="button"
@@ -94,7 +94,7 @@ export default function HomePage() {
               ))}
             </div>
           </FadeIn>
-          <div className="max-w-4xl mb-5 md:mb-6">
+          <div className="max-w-4xl mb-3 md:mb-6">
             <FadeInUp delay={0.1}>
               <p className="text-white/80 font-headline font-medium text-xs tracking-wider uppercase mb-2">
                 Engineering & Infrastructure
@@ -107,7 +107,7 @@ export default function HomePage() {
               </h1>
             </FadeInUp>
             <FadeInUp delay={0.35}>
-              <p className="text-white/90 text-sm md:text-base max-w-xl mb-5 md:mb-6 font-light leading-relaxed">
+              <p className="text-white/90 text-sm md:text-base max-w-xl mb-4 md:mb-6 font-light leading-relaxed">
                 Hindland Infrastructure Pvt. Ltd. delivers EPC execution, CHP
                 systems, structural fabrication, piping works, and solar EPC
                 projects with uncompromising focus on quality and safety.
@@ -135,43 +135,43 @@ export default function HomePage() {
           </div>
 
           <FadeInUp delay={0.55}>
-            <div className="mt-4 md:mt-6 bg-[#1b1c1c]/50 backdrop-blur-sm text-white rounded-2xl px-6 md:px-10 py-4 md:py-5 border border-white/10">
-              <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0">
+            <div className="mt-2 md:mt-6 bg-[#1b1c1c]/50 backdrop-blur-sm text-white rounded-2xl px-4 md:px-10 py-3 md:py-5 border border-white/10">
+              <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-0">
                 <StaggerItem className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
+                  <span className="material-symbols-outlined text-white/60 text-xl md:text-3xl">
                     local_shipping
                   </span>
-                  <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
+                  <p className="font-headline font-bold text-[9px] md:text-[11px] uppercase tracking-wider leading-snug">
                     Shipment
                     <br />
                     Delivered
                   </p>
                 </StaggerItem>
                 <StaggerItem className="flex items-center gap-3 md:border-l md:border-white/10 pl-0 md:pl-8">
-                  <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
+                  <span className="material-symbols-outlined text-white/60 text-xl md:text-3xl">
                     handshake
                   </span>
-                  <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
+                  <p className="font-headline font-bold text-[9px] md:text-[11px] uppercase tracking-wider leading-snug">
                     Trusted
                     <br />
                     Clients
                   </p>
                 </StaggerItem>
                 <StaggerItem className="flex items-center gap-3 md:border-l md:border-white/10 pl-0 md:pl-8">
-                  <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
+                  <span className="material-symbols-outlined text-white/60 text-xl md:text-3xl">
                     calendar_month
                   </span>
-                  <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
+                  <p className="font-headline font-bold text-[9px] md:text-[11px] uppercase tracking-wider leading-snug">
                     Years in
                     <br />
                     Business
                   </p>
                 </StaggerItem>
                 <StaggerItem className="flex items-center gap-3 md:border-l md:border-white/10 pl-0 md:pl-8">
-                  <span className="material-symbols-outlined text-white/60 text-2xl md:text-3xl">
+                  <span className="material-symbols-outlined text-white/60 text-xl md:text-3xl">
                     groups
                   </span>
-                  <p className="font-headline font-bold text-[10px] md:text-[11px] uppercase tracking-wider leading-snug">
+                  <p className="font-headline font-bold text-[9px] md:text-[11px] uppercase tracking-wider leading-snug">
                     Skilled
                     <br />
                     Manpower

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 
 export const metadata = {
   title: "Contact Us | HINDLAND Infrastructure",
@@ -9,7 +10,7 @@ export default function ContactPage() {
   return (
     <main className="pt-24">
       {/* Hero Section */}
-      <section className="relative h-[614px] flex items-center overflow-hidden bg-primary">
+      <section className="relative min-h-[500px] h-[58vh] md:h-[614px] flex items-center overflow-hidden bg-primary">
         <div className="absolute inset-0 z-0">
           <Image
             className="w-full h-full object-cover opacity-40 grayscale"
@@ -20,15 +21,15 @@ export default function ContactPage() {
             unoptimized
           />
         </div>
-        <div className="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
+        <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-8 w-full">
           <div className="max-w-3xl">
             <span className="inline-block px-3 py-1 bg-primary-container text-on-primary font-label text-[10px] tracking-[0.2em] uppercase mb-6">
               Contact Us
             </span>
-            <h1 className="text-white font-headline text-6xl md:text-8xl font-black tracking-tighter leading-none mb-8">
+            <h1 className="text-white font-headline text-[clamp(2rem,10vw,3.5rem)] md:text-8xl font-black tracking-tight md:tracking-tighter leading-[0.95] mb-6 md:mb-8 max-w-[12ch] sm:max-w-none">
               Let&apos;s Discuss Your Project Requirements
             </h1>
-            <p className="text-surface-container-highest font-body text-xl md:text-2xl leading-relaxed max-w-2xl">
+            <p className="text-surface-container-highest font-body text-base sm:text-lg md:text-2xl leading-normal md:leading-relaxed max-w-[20rem] sm:max-w-2xl">
               Share your requirement for EPC execution, O&amp;M support,
               piping/structural work, CHP systems, or industrial trading
               supply. Our team will connect with you with the right technical
@@ -45,73 +46,7 @@ export default function ContactPage() {
             <h2 className="font-headline text-3xl font-bold tracking-tight text-primary mb-10">
               Send a Message
             </h2>
-            <form className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-2">
-                  <label className="block font-label text-[10px] uppercase tracking-widest text-secondary font-bold">
-                    Full Name
-                  </label>
-                  <input
-                    className="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary-container/20 rounded-sm p-4 text-on-surface placeholder:text-stone-400 transition-all"
-                    placeholder="John Doe"
-                    type="text"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="block font-label text-[10px] uppercase tracking-widest text-secondary font-bold">
-                    Email Address
-                  </label>
-                  <input
-                    className="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary-container/20 rounded-sm p-4 text-on-surface placeholder:text-stone-400 transition-all"
-                    placeholder="john@company.com"
-                    type="email"
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-2">
-                  <label className="block font-label text-[10px] uppercase tracking-widest text-secondary font-bold">
-                    Phone Number
-                  </label>
-                  <input
-                    className="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary-container/20 rounded-sm p-4 text-on-surface placeholder:text-stone-400 transition-all"
-                    placeholder="+1 (555) 000-0000"
-                    type="tel"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="block font-label text-[10px] uppercase tracking-widest text-secondary font-bold">
-                    Project Type
-                  </label>
-                  <select className="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary-container/20 rounded-sm p-4 text-on-surface transition-all">
-                    <option>EPC / Fabrication &amp; Erection</option>
-                    <option>O&amp;M Services</option>
-                    <option>Solar EPC</option>
-                    <option>B2B Material Supply</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="block font-label text-[10px] uppercase tracking-widest text-secondary font-bold">
-                  Your Message
-                </label>
-                <textarea
-                  className="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary-container/20 rounded-sm p-4 text-on-surface placeholder:text-stone-400 transition-all"
-                  placeholder="Describe your project requirements, location, timeline, and scope..."
-                  rows={5}
-                ></textarea>
-              </div>
-              <button
-                className="w-full md:w-auto bg-primary-container text-on-primary px-12 py-5 rounded-lg font-headline font-bold uppercase tracking-widest hover:bg-primary transition-all flex items-center justify-center gap-3"
-                type="submit"
-              >
-                Submit Now{" "}
-                <span className="material-symbols-outlined text-lg">
-                  arrow_forward
-                </span>
-              </button>
-            </form>
+            <ContactForm />
           </div>
           <div className="lg:col-span-5 bg-primary-container p-10 md:p-16 text-white flex flex-col justify-between">
             <div>

@@ -4,15 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   FadeInUp,
-  SlideInLeft,
-  SlideInRight,
   StaggerContainer,
   StaggerItem,
 } from "../components/MotionWrappers";
 import { services as serviceCatalog } from "../data/servicesContent";
 import { industries as industryCatalog } from "../data/industriesContent";
-
-const [fabricationService, omService] = serviceCatalog;
 
 export default function ServicesPage() {
   return (
@@ -52,123 +48,161 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Comprehensive Service List */}
-      <section className="py-24 bg-surface">
+      {/* Intro Strip */}
+      <section className="bg-surface border-b border-outline-variant/30">
+        <div className="max-w-screen-2xl mx-auto px-8 py-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <FadeInUp className="lg:col-span-5">
+            <p className="uppercase tracking-[0.3em] text-primary-container font-bold mb-4 text-xs">
+              Service portfolio
+            </p>
+            <h2 className="font-headline text-3xl md:text-4xl font-black text-primary tracking-tighter leading-tight">
+              Explore our complete service portfolio
+            </h2>
+          </FadeInUp>
+          <FadeInUp delay={0.1} className="lg:col-span-7">
+            <p className="text-on-surface-variant text-lg leading-relaxed">
+              Individual service pages include the essential details clients
+              look for before connecting with us — scope, capabilities,
+              sectors served, and execution approach. Click any service to
+              dive into the details, or scroll to see them all at a glance.
+            </p>
+          </FadeInUp>
+        </div>
+      </section>
+
+      {/* All Services Grid */}
+      <section className="py-24 bg-surface-container-low">
         <div className="max-w-screen-2xl mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start mb-32">
-            <SlideInLeft className="sticky top-32">
-              <span className="text-primary-container font-headline font-bold uppercase tracking-widest text-sm mb-4 block">
-                {fabricationService.label}
-              </span>
-              <h2 className="font-headline text-4xl md:text-5xl font-black text-primary tracking-tighter mb-8">
-                {fabricationService.title}
-              </h2>
-              <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
-                {fabricationService.summary}
-              </p>
-              <ul className="space-y-4">
-                {fabricationService.capabilities.slice(0, 2).map((cap) => (
-                  <li key={cap.title} className="flex items-start gap-4">
-                    <span className="material-symbols-outlined text-primary-container">
-                      {cap.icon}
-                    </span>
-                    <div>
-                      <h4 className="font-bold text-on-surface">{cap.title}</h4>
-                      <p className="text-sm text-on-surface-variant">{cap.text}</p>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCatalog.map((service) => (
+              <StaggerItem key={service.slug}>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="group relative flex h-full flex-col bg-white monolith-shadow overflow-hidden border border-transparent hover:border-outline-variant/40 transition-all duration-300"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden bg-surface-container-highest">
+                    <Image
+                      src={service.cardImage}
+                      alt={service.title}
+                      width={800}
+                      height={600}
+                      unoptimized
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    />
+                    <div className="absolute inset-0 bg-primary/15 group-hover:bg-primary/0 transition-colors duration-500"></div>
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-block px-3 py-1 bg-primary-container text-white text-[10px] font-bold tracking-[0.2em] uppercase">
+                        {service.label}
+                      </span>
                     </div>
+                    <div className="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-white/90 flex items-center justify-center monolith-shadow">
+                      <span className="material-symbols-outlined text-primary-container">
+                        {service.icon}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-8 flex flex-col flex-1">
+                    <h3 className="font-headline text-2xl font-black text-primary uppercase tracking-tight mb-3 leading-tight">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-on-surface-variant leading-relaxed line-clamp-3 mb-5">
+                      {service.summary}
+                    </p>
+
+                    {service.tags?.length ? (
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {service.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 bg-surface-container-low text-on-surface-variant border border-outline-variant/40"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    ) : null}
+
+                    {service.bestFor ? (
+                      <p className="text-xs text-on-surface-variant/80 mb-6">
+                        <span className="font-bold uppercase tracking-widest text-primary-container mr-2">
+                          Best for
+                        </span>
+                        {service.bestFor}
+                      </p>
+                    ) : null}
+
+                    <div className="mt-auto flex items-center justify-between border-t border-outline-variant/30 pt-5">
+                      <span className="font-headline font-bold text-[10px] uppercase tracking-[0.2em] text-primary-container">
+                        Read more
+                      </span>
+                      <span className="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">
+                        arrow_forward
+                      </span>
+                    </div>
+                  </div>
+
+                  <span className="absolute bottom-0 left-0 w-full h-1 bg-primary-container scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Engagement Models Strip */}
+      <section className="py-20 bg-surface">
+        <div className="max-w-screen-2xl mx-auto px-8">
+          <FadeInUp className="mb-12">
+            <p className="uppercase tracking-[0.3em] text-primary-container font-bold mb-4 text-xs">
+              Industries & Engagement Models
+            </p>
+            <h2 className="font-headline text-3xl md:text-4xl font-black text-primary tracking-tighter uppercase leading-tight max-w-3xl">
+              Flexible engagement across diverse industrial environments
+            </h2>
+          </FadeInUp>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <StaggerItem className="bg-surface-container-low border-l-4 border-primary-container p-8">
+              <h3 className="font-headline text-lg font-bold uppercase tracking-wide text-on-surface mb-5">
+                Engagement Models
+              </h3>
+              <ul className="space-y-3 text-on-surface-variant">
+                {[
+                  "EPC / Turnkey Project Execution",
+                  "O&M Contracts (Annual / Long-term)",
+                  "Project-Based Job Work",
+                  "Shutdown & Turnaround Support",
+                  "Emergency Breakdown Response",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm">
+                    <span className="mt-1 w-1.5 h-1.5 bg-primary-container shrink-0"></span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <Link
-                href={`/services/${fabricationService.slug}`}
-                className="group mt-10 inline-flex items-center gap-2 text-primary font-headline font-bold uppercase text-xs tracking-widest hover:gap-3 transition-all"
-              >
-                Read more
-                <span className="material-symbols-outlined text-lg group-hover:translate-x-0.5 transition-transform">
-                  arrow_forward
-                </span>
-              </Link>
-            </SlideInLeft>
-            <SlideInRight className="relative group">
-              <div className="absolute -inset-4 bg-surface-container-high -z-10 group-hover:inset-0 transition-all duration-500"></div>
-              <Image
-                src={fabricationService.heroImage}
-                alt={fabricationService.title}
-                width={800}
-                height={1000}
-                unoptimized
-                className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
-              />
-            </SlideInRight>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start mb-32">
-            <SlideInLeft className="order-2 lg:order-1 relative group">
-              <div className="absolute -inset-4 bg-surface-container-high -z-10 group-hover:inset-0 transition-all duration-500"></div>
-              <Image
-                src={omService.heroImage}
-                alt={omService.title}
-                width={800}
-                height={1000}
-                unoptimized
-                className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
-              />
-            </SlideInLeft>
-            <SlideInRight className="order-1 lg:order-2 sticky top-32">
-              <span className="text-primary-container font-headline font-bold uppercase tracking-widest text-sm mb-4 block">
-                {omService.label}
-              </span>
-              <h2 className="font-headline text-4xl md:text-5xl font-black text-primary tracking-tighter mb-8">
-                {omService.title}
-              </h2>
-              <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
-                {omService.summary}
-              </p>
-              <StaggerContainer className="grid grid-cols-2 gap-6">
-                {omService.capabilities.slice(0, 2).map((cap) => (
-                  <StaggerItem
-                    key={cap.title}
-                    className="bg-surface-container-low p-6"
-                  >
-                    <span className="material-symbols-outlined text-primary-container mb-4">
-                      {cap.icon}
-                    </span>
-                    <h4 className="font-bold mb-2">{cap.title}</h4>
-                    <p className="text-xs text-on-surface-variant">{cap.text}</p>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
-              <Link
-                href={`/services/${omService.slug}`}
-                className="group mt-10 inline-flex items-center gap-2 text-primary font-headline font-bold uppercase text-xs tracking-widest hover:gap-3 transition-all"
-              >
-                Read more
-                <span className="material-symbols-outlined text-lg group-hover:translate-x-0.5 transition-transform">
-                  arrow_forward
-                </span>
-              </Link>
-            </SlideInRight>
-          </div>
-
-          <FadeInUp className="mb-32 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 rounded-xl border border-outline-variant/40 bg-surface-container-low px-8 py-8">
-            <div>
-              <p className="text-primary-container font-headline font-bold uppercase tracking-widest text-xs mb-2">
-                {serviceCatalog[2].label}
-              </p>
-              <h3 className="font-headline text-2xl font-black text-primary">
-                {serviceCatalog[2].title}
+            </StaggerItem>
+            <StaggerItem className="bg-primary text-white p-8 relative overflow-hidden">
+              <div className="absolute right-0 top-0 w-1/3 h-full bg-white/5 skew-x-12 translate-x-20"></div>
+              <h3 className="font-headline text-lg font-bold uppercase tracking-wide mb-5 relative">
+                Why Hindland
               </h3>
-              <p className="text-on-surface-variant text-sm mt-2 max-w-xl">
-                {serviceCatalog[2].summary}
+              <p className="text-white/80 text-sm leading-relaxed relative mb-6">
+                We combine engineering expertise with disciplined execution —
+                ensuring client confidence through safety, quality,
+                transparency, and dependable delivery.
               </p>
-            </div>
-            <Link
-              href={`/services/${serviceCatalog[2].slug}`}
-              className="shrink-0 inline-flex items-center justify-center gap-2 bg-primary-container text-white font-headline font-bold uppercase text-xs tracking-widest px-8 py-4 hover:bg-primary transition-colors"
-            >
-              Read more
-              <span className="material-symbols-outlined text-lg">arrow_forward</span>
-            </Link>
-          </FadeInUp>
+              <div className="grid grid-cols-2 gap-3 relative">
+                {["Safety", "Quality", "Transparency", "Delivery"].map((v) => (
+                  <div
+                    key={v}
+                    className="text-[10px] font-bold uppercase tracking-[0.2em] bg-white/10 px-3 py-2 text-center"
+                  >
+                    {v}
+                  </div>
+                ))}
+              </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -189,7 +223,7 @@ export default function ServicesPage() {
                   execution models.
                 </p>
               </div>
-              <div className="h-px bg-outline-variant flex-grow mx-8 hidden md:block"></div>
+              <div className="h-px bg-outline-variant grow mx-8 hidden md:block"></div>
               <div className="flex gap-4">
                 <div className="w-12 h-12 bg-white flex items-center justify-center border border-outline-variant hover:bg-primary-container hover:text-white transition-colors cursor-pointer">
                   <span className="material-symbols-outlined">west</span>

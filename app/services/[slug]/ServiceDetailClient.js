@@ -30,7 +30,7 @@ export default function ServiceDetailClient({ service, prev, next }) {
             unoptimized
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-primary/95 via-primary/50 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-screen-2xl mx-auto px-8 w-full pb-16">
           <FadeInUp>
@@ -80,14 +80,14 @@ export default function ServiceDetailClient({ service, prev, next }) {
           {service.facts.map((fact, i) => (
             <StaggerItem
               key={fact.label}
-              className={`py-8 px-6 flex items-center gap-4 ${i < 3 ? "border-b md:border-b-0 md:border-r border-outline-variant/30" : ""}`}
+              className={`py-7 md:py-8 px-4 md:px-6 flex flex-col md:flex-row items-center justify-center md:justify-start text-center md:text-left gap-3 md:gap-4 ${i < 3 ? "border-b md:border-b-0 md:border-r border-outline-variant/30" : ""}`}
             >
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                 <span className="material-symbols-outlined text-primary text-xl">
                   {fact.icon}
                 </span>
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-0.5">
                   {fact.label}
                 </p>
@@ -184,7 +184,7 @@ export default function ServiceDetailClient({ service, prev, next }) {
                 key={i}
                 className={`overflow-hidden rounded-lg monolith-shadow group ${i === 0 ? "md:col-span-2 md:row-span-2" : ""}`}
               >
-                <div className="relative overflow-hidden aspect-[4/3]">
+                <div className="relative overflow-hidden aspect-4/3">
                   <Image
                     alt={`${service.title} — ${i + 1}`}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
