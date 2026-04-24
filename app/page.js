@@ -19,6 +19,23 @@ const heroBanners = [
   "https://storage.googleapis.com/art-docs/hindland_banner_5.png",
 ];
 
+const partnerLogos = [
+  "https://storage.googleapis.com/art-docs/ma1.webp",
+  "https://storage.googleapis.com/art-docs/ma2.webp",
+  "https://storage.googleapis.com/art-docs/ma3.webp",
+  "https://storage.googleapis.com/art-docs/ma4.webp",
+  "https://storage.googleapis.com/art-docs/ma5.webp",
+  "https://storage.googleapis.com/art-docs/ma6.webp",
+  "https://storage.googleapis.com/art-docs/ma7.webp",
+  "https://storage.googleapis.com/art-docs/ma8.webp",
+  "https://storage.googleapis.com/art-docs/ma9.webp",
+  "https://storage.googleapis.com/art-docs/ma10.webp",
+  "https://storage.googleapis.com/art-docs/ma11.webp",
+  "https://storage.googleapis.com/art-docs/ma12.webp",
+  "https://storage.googleapis.com/art-docs/ma13.webp",
+  "https://storage.googleapis.com/art-docs/ma14.webp",
+];
+
 export default function HomePage() {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -284,6 +301,33 @@ export default function HomePage() {
               </Link>
             </div>
           </FadeInUp>
+        </div>
+      </section>
+
+      {/* Brands Marquee */}
+      <section className="bg-white py-12 md:py-16">
+        <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
+          <FadeInUp>
+            <h3 className="text-center font-headline font-black text-2xl md:text-3xl text-on-surface mb-8">
+              Trusted by <span className="text-primary-container">Leading Brands</span>
+            </h3>
+          </FadeInUp>
+          <div className="partner-logo-slider">
+            <div className="partner-logo-slide">
+              {[...partnerLogos, ...partnerLogos].map((logo, index) => (
+                <div key={`${logo}-${index}`} className="partner-logo-item">
+                  <Image
+                    src={logo}
+                    alt={`Partner brand logo ${index + 1}`}
+                    width={180}
+                    height={90}
+                    className="partner-logo-image"
+                    unoptimized
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
